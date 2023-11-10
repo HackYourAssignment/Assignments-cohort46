@@ -31,31 +31,54 @@ randomly select array elements four times inside the `tellFortune` function
 body, this code is now written once only in a separated function.
 -----------------------------------------------------------------------------*/
 
-// This function should take an array as its parameter and return
-// a randomly selected element as its return value.
-function selectRandomly(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function selectRandomly(numKids, partnerNames, locations, jobTitles) {
+  const randomlySelectedIndex1 = Math.floor(Math.random() * numKids.length);
+  const randomlySelectedIndex2 = Math.floor(
+    Math.random() * partnerNames.length
+  );
+  const randomlySelectedIndex3 = Math.floor(Math.random() * locations.length);
+  const randomlySelectedIndex4 = Math.floor(Math.random() * jobTitles.length);
+
+  const randomlySelectedElement1 = numKids[randomlySelectedIndex1];
+  const randomlySelectedElement2 = partnerNames[randomlySelectedIndex2];
+  const randomlySelectedElement3 = locations[randomlySelectedIndex3];
+  const randomlySelectedElement4 = jobTitles[randomlySelectedIndex4];
+
+  // Return the randomly selected elements in an object
+  return {
+    numKids: randomlySelectedElement1,
+    partnerName: randomlySelectedElement2,
+    location: randomlySelectedElement3,
+    jobTitle: randomlySelectedElement4,
+  };
 }
 
-function tellFortune(/* TODO add parameter(s) here */) {
-  // TODO complete this function
+function tellFortune(
+  numKidsOptions,
+  partnerNamesOptions,
+  locationsOptions,
+  jobTitlesOptions
+) {
+  const { numKids, partnerName, location, jobTitle } = selectRandomly(
+    numKidsOptions,
+    partnerNamesOptions,
+    locationsOptions,
+    jobTitlesOptions
+  );
+
+  return `You will be a ${jobTitle} in ${location}, married to ${partnerName} with ${numKids} kids.`;
 }
 
 function main() {
-  const numKids = [
-    // TODO add elements here
-  ];
-
-  const partnerNames = [
-    // TODO add elements here
-  ];
-
-  const locations = [
-    // TODO add elements here
-  ];
-
+  const numKids = [1, 2, 3, 4, 5];
+  const partnerNames = ['Adele', 'Charlotte', 'Sara', 'Willem', 'Ada'];
+  const locations = ['Amsterdam', 'Tilburg', 'Utrecht', 'Groningen', 'Paris'];
   const jobTitles = [
-    // TODO add elements here
+    'doctor',
+    'teacher',
+    'nurse',
+    'gardener',
+    'full stack developer',
   ];
 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
