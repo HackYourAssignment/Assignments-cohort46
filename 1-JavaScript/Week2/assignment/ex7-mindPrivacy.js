@@ -32,6 +32,12 @@ const employeeRecords = [
 // ! Function under test
 function filterPrivateData(/* TODO parameter(s) go here */) {
   // TODO complete this function
+
+  let publicEmployeeRecords = [] // declared empty variable to store public data
+  for (const { name, occupation, email } of records){ // using object destructuring to extract the properties from records
+    publicEmployeeRecords.push({name, occupation, email}); // creating new object with the selected properties and pushing them into the public... array
+  }
+  return publicEmployeeRecords;
 }
 
 // ! Test functions (plain vanilla JavaScript)
