@@ -21,22 +21,71 @@ instead!
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
 const cartForParty = {
-  // TODO complete this object
+  chocolate: 2.99,
+  chips: 2.79,
+  cocaCola: 1.99,
+  bread: 0.99,
+  rice: 2.5,
 };
+// I found this method via: https://www.freecodecamp.org/news/how-to-iterate-over-objects-in-javascript/
 
-function calculateTotalPrice(/* TODO parameter(s) go here */) {
-  // TODO replace this comment with your code
+function calculateTotalPrice(cartForParty) {
+  let totalCost = 0;
+  let products = Object.keys(cartForParty);
+
+  products.forEach((product) => {
+    totalCost = totalCost + cartForParty[product];
+  });
+
+  let resultString = `Total: €${totalCost}`;
+
+  console.log(resultString);
+  return resultString;
 }
+calculateTotalPrice(cartForParty);
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  // TODO replace this comment with your code
+  const cart = {
+    item1: 1.99,
+    item2: 0.52,
+    item3: 0.66,
+  };
+  const result = calculateTotalPrice(cart);
+
+  if (typeof result === 'string') {
+    console.log('Test 1 Passed!');
+  } else {
+    console.error(
+      'Test 1 Failed. calculateTotalPrice did not return a string.'
+    );
+  }
 }
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-  // TODO replace this comment with your code
+  const cartForParty = {
+    chocolate: 2.99,
+    chips: 2.79,
+    cocaCola: 1.99,
+    bread: 0.99,
+    rice: 2.5,
+  };
+
+  const result = calculateTotalPrice(cartForParty);
+  const expectedOutput = 'Total: €11.26';
+
+  if (result === expectedOutput) {
+    console.log('Test 2 Passed!');
+  } else {
+    console.error(
+      'Test 2 Failed. Expected:',
+      expectedOutput,
+      'Actual:',
+      result
+    );
+  }
 }
 
 function test() {
