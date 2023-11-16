@@ -17,7 +17,6 @@ calculate it!
 -----------------------------------------------------------------------------*/
 
 function calculateDogAge(age) {
-  // TODO complete this function
   
   // multiplied the human age by 7 to get the age in dog years
   const dogYears = age * 7;

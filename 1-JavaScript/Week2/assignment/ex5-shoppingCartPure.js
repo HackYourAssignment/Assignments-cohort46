@@ -17,12 +17,11 @@ it pure. Do the following:
 ------------------------------------------------------------------------------*/
 // ! Function under test
 function addToShoppingCart(shoppingCartList, groceryItem) {
-  // TODO complete this function
 
   const newShoppingCartList = [...shoppingCartList]; // used spread operator to copy the contents of the existing shopping cart list 
 
-  if (newShoppingCartList.length === 3){
-    newShoppingCartList.shift(); // if newShopping... has exactly three elements, it will remove first element from array
+  if (newShoppingCartList.length >= 3){
+    newShoppingCartList.shift(); // if newShopping... has three or more elements, it will remove first element from array
   }
   if (groceryItem){
     newShoppingCartList.push(groceryItem); // if groceryItem exists (true), it will be added to the end of newShopping... array

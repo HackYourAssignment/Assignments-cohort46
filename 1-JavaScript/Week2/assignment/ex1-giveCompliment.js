@@ -19,7 +19,7 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-Java
    `giveCompliment` function to the console.
 -----------------------------------------------------------------------------*/
 function giveCompliment(name) {
-  // TODO complete this function
+
   const compliments = ['great', 'awesome', 'courageous', 'hilarious', 
   'authentic', 'affectionate', 'brilliant', 'captivating', 'creative', 'thoughtful']
 
@@ -33,7 +33,7 @@ function giveCompliment(name) {
 }
 
 function main() {
-  // TODO substitute your own name for "HackYourFuture"
+  
   const myName = 'Fressia';
 
   console.log(giveCompliment(myName));

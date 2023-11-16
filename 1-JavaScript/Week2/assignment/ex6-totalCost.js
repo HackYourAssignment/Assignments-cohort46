@@ -21,7 +21,6 @@ instead!
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
 const cartForParty = {
-  // TODO complete this object
   beers: 2.75,
   chips: 1.99,
   cups: 5.25,
@@ -30,20 +29,14 @@ const cartForParty = {
 };
 
 function calculateTotalPrice(cart) {
-  // TODO replace this comment with your code
-
-  let totalPrice = 0; // will store sum of the prices
-  for (const i in cart) { // loops through each element in 'cart' object
-    totalPrice += cart[i]; // adds value of each item in the 'cart' to the 'totalPrice'.
-  }
-
+  const cartPrices = Object.values(cart); // returns an array with the property values of cartForParty
+  const totalPrice = cartPrices.reduce((accumulator, currentValue) => accumulator + currentValue); // Used the reduce method to sum up all values in the cartPrices array
   return `Total: €${totalPrice}`
 }
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  // TODO replace this comment with your code
   const expected = 1;
   const actual = calculateTotalPrice.length;
   console.assert(actual === expected);
@@ -51,7 +44,6 @@ function test1() {
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-  // TODO replace this comment with your code
   const expected = 'Total: €43.93';
   const actual = calculateTotalPrice(cartForParty);
   console.assert(actual === expected);
