@@ -31,13 +31,13 @@ const cartForParty = {
 
 function calculateTotalPrice(cartForParty) {
   let totalCost = 0;
-  let products = Object.keys(cartForParty);
+  const products = Object.keys(cartForParty);
 
   products.forEach((product) => {
     totalCost = totalCost + cartForParty[product];
   });
 
-  let resultString = `Total: €${totalCost}`;
+  const resultString = `Total: €${totalCost}`;
 
   console.log(resultString);
   return resultString;
@@ -45,46 +45,32 @@ function calculateTotalPrice(cartForParty) {
 calculateTotalPrice(cartForParty);
 
 // ! Test functions (plain vanilla JavaScript)
+// Test function
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  const cart = {
-    item1: 1.99,
-    item2: 0.52,
-    item3: 0.66,
-  };
-  const result = calculateTotalPrice(cart);
 
-  if (typeof result === 'string') {
+  if (calculateTotalPrice.length === 1) {
     console.log('Test 1 Passed!');
   } else {
     console.error(
-      'Test 1 Failed. calculateTotalPrice did not return a string.'
+      `Test 1 Failed. calculateTotalPrice expected to have 1 parameter, but it has ${calculateTotalPrice.length}.`
     );
   }
 }
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-  const cartForParty = {
-    chocolate: 2.99,
-    chips: 2.79,
-    cocaCola: 1.99,
-    bread: 0.99,
-    rice: 2.5,
-  };
 
   const result = calculateTotalPrice(cartForParty);
   const expectedOutput = 'Total: €11.26';
 
+  console.assert(
+    result === expectedOutput,
+    `Test 2 Failed! Expected "${expectedOutput}", but got "${result}"`
+  );
+
   if (result === expectedOutput) {
     console.log('Test 2 Passed!');
-  } else {
-    console.error(
-      'Test 2 Failed. Expected:',
-      expectedOutput,
-      'Actual:',
-      result
-    );
   }
 }
 

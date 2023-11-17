@@ -31,42 +31,20 @@ randomly select array elements four times inside the `tellFortune` function
 body, this code is now written once only in a separated function.
 -----------------------------------------------------------------------------*/
 
-function selectRandomly(numKids, partnerNames, locations, jobTitles) {
-  const randomlySelectedIndex1 = Math.floor(Math.random() * numKids.length);
-  const randomlySelectedIndex2 = Math.floor(
-    Math.random() * partnerNames.length
-  );
-  const randomlySelectedIndex3 = Math.floor(Math.random() * locations.length);
-  const randomlySelectedIndex4 = Math.floor(Math.random() * jobTitles.length);
-
-  const randomlySelectedElement1 = numKids[randomlySelectedIndex1];
-  const randomlySelectedElement2 = partnerNames[randomlySelectedIndex2];
-  const randomlySelectedElement3 = locations[randomlySelectedIndex3];
-  const randomlySelectedElement4 = jobTitles[randomlySelectedIndex4];
-
-  // Return the randomly selected elements in an object
-  return {
-    numKids: randomlySelectedElement1,
-    partnerName: randomlySelectedElement2,
-    location: randomlySelectedElement3,
-    jobTitle: randomlySelectedElement4,
-  };
+function selectRandomly(arr) {
+  const index = Math.floor(Math.random() * arr.length);
+  return arr[index];
 }
 
-function tellFortune(
-  numKidsOptions,
-  partnerNamesOptions,
-  locationsOptions,
-  jobTitlesOptions
-) {
-  const { numKids, partnerName, location, jobTitle } = selectRandomly(
-    numKidsOptions,
-    partnerNamesOptions,
-    locationsOptions,
-    jobTitlesOptions
-  );
+function tellFortune(numKids, partnerNames, locations, jobTitles) {
+  const { numKid, partnerName, location, jobTitle } = {
+    numKid: selectRandomly(numKids),
+    partnerName: selectRandomly(partnerNames),
+    location: selectRandomly(locations),
+    jobTitle: selectRandomly(jobTitles),
+  };
 
-  return `You will be a ${jobTitle} in ${location}, married to ${partnerName} with ${numKids} kids.`;
+  return `You will be a ${jobTitle} in ${location}, married to ${partnerName} with ${numKid} kids.`;
 }
 
 function main() {
