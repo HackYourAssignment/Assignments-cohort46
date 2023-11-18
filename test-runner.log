@@ -1,0 +1,193 @@
+2023-11-15 02:25:00 info: ----------------------------------------------
+2023-11-15 02:25:00 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-11-15 02:25:00 info: ----------------------------------------------
+2023-11-15 02:25:04 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should have all TODO comments removed
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+  Expected: You are great, HackYourFuture!
+  Received: you are great, HackYourFuture!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="C:\office\hyf_course\assignment\Assignments-cohort46\test-runner\CustomReporter.js"
+2023-11-15 02:25:09 error: *** Spell Checker Report ***
+
+c:/office/hyf_course/assignment/Assignments-cohort46/1-JavaScript/Week2/assignment/ex1-giveCompliment.js:30:19 - Unknown word (Wajahat)
+
+2023-11-15 02:26:04 info: Disclaimer turned off
+2023-11-15 02:27:19 info: ----------------------------------------
+2023-11-15 02:27:19 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-11-15 02:27:19 info: ----------------------------------------
+2023-11-15 02:27:21 error: *** Unit Test Error Report ***
+
+✕ calculateDogAge should give 7 dog years for 1 human year
+  Expected: Your doggie is 7 years old in dog years!
+  Received: your doggie is 7 years old in dog years!
+✕ calculateDogAge should give 14 dog years for 2 human years
+  Expected: Your doggie is 14 years old in dog years!
+  Received: your doggie is 14 years old in dog years!
+✕ calculateDogAge give 21 dog years for 3 human years
+  Expected: Your doggie is 21 years old in dog years!
+  Received: your doggie is 21 years old in dog years!
+
+
+Command failed: npx jest ex2-dogYears.test.js --colors --reporters="C:\office\hyf_course\assignment\Assignments-cohort46\test-runner\CustomReporter.js"
+2023-11-15 02:30:07 info: -------------------------------------------
+2023-11-15 02:30:07 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-11-15 02:30:07 info: -------------------------------------------
+2023-11-15 02:30:09 info: All unit tests passed.
+2023-11-15 02:30:12 info: All steps were completed successfully
+2023-11-15 02:35:23 info: ----------------------------------------------
+2023-11-15 02:35:23 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-11-15 02:35:23 info: ----------------------------------------------
+2023-11-15 02:35:24 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+  Expected: You are great, HackYourFuture!
+  Received: you are great, HackYourFuture!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="C:\office\hyf_course\assignment\Assignments-cohort46\test-runner\CustomReporter.js"
+2023-11-15 02:35:27 error: *** Spell Checker Report ***
+
+c:/office/hyf_course/assignment/Assignments-cohort46/1-JavaScript/Week2/assignment/ex1-giveCompliment.js:29:19 - Unknown word (Wajahat)
+
+2023-11-15 02:37:50 info: ----------------------------------------------
+2023-11-15 02:37:50 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-11-15 02:37:50 info: ----------------------------------------------
+2023-11-15 02:37:52 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+  Expected: You are great, HackYourFuture!
+  Received: you are great, HackYourFuture!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="C:\office\hyf_course\assignment\Assignments-cohort46\test-runner\CustomReporter.js"
+2023-11-15 02:37:55 error: *** Spell Checker Report ***
+
+c:/office/hyf_course/assignment/Assignments-cohort46/1-JavaScript/Week2/assignment/ex1-giveCompliment.js:40:19 - Unknown word (Wajahat)
+
+2023-11-15 02:46:04 info: --------------------------------------------
+2023-11-15 02:46:04 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-11-15 02:46:04 info: --------------------------------------------
+2023-11-15 02:46:04 warn: A unit test file was not provided.
+2023-11-15 02:46:07 info: All steps were completed successfully
+2023-11-15 02:48:08 info: ------------------------------------------------
+2023-11-15 02:48:08 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-11-15 02:48:08 info: ------------------------------------------------
+2023-11-15 02:48:08 warn: A unit test file was not provided.
+2023-11-15 02:48:11 info: All steps were completed successfully
+2023-11-15 02:48:32 info: -----------------------------------------
+2023-11-15 02:48:32 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-11-15 02:48:32 info: -----------------------------------------
+2023-11-15 02:48:32 warn: A unit test file was not provided.
+2023-11-15 02:48:34 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  34:3   warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+  34:12  warning  'item' is never reassigned. Use 'const' instead       no-autofix/prefer-const
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2023-11-15 02:53:08 info: -------------------------------------------
+2023-11-15 02:53:08 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2023-11-15 02:53:08 info: -------------------------------------------
+2023-11-15 02:53:08 warn: A unit test file was not provided.
+2023-11-15 02:53:09 error: *** ESLint Report ***
+
+ex7-mindPrivacy.js
+  34:33  error  'gender' is defined but never used  no-unused-vars
+  34:42  error  'salary' is defined but never used  no-unused-vars
+
+✖ 2 problems (2 errors, 0 warnings)
+
+
+2023-11-15 03:07:36 info: -------------------------------------------
+2023-11-15 03:07:36 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2023-11-15 03:07:36 info: -------------------------------------------
+2023-11-15 03:07:36 warn: A unit test file was not provided.
+2023-11-15 03:07:40 info: All steps were completed successfully
+2023-11-17 05:36:53 info: ----------------------------------------------
+2023-11-17 05:36:53 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-11-17 05:36:53 info: ----------------------------------------------
+2023-11-17 05:36:56 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+  Expected: You are great, HackYourFuture!
+  Received: you are great, HackYourFuture!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="C:\office\hyf_course\assignment\Assignments-cohort46\test-runner\CustomReporter.js"
+2023-11-17 05:45:09 info: ----------------------------------------------
+2023-11-17 05:45:09 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-11-17 05:45:09 info: ----------------------------------------------
+2023-11-17 05:45:11 info: All unit tests passed.
+2023-11-17 05:45:15 info: All steps were completed successfully
+2023-11-17 05:47:32 info: ----------------------------------------
+2023-11-17 05:47:32 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-11-17 05:47:32 info: ----------------------------------------
+2023-11-17 05:47:34 info: All unit tests passed.
+2023-11-17 05:47:37 info: All steps were completed successfully
+2023-11-17 06:07:51 info: -------------------------------------------
+2023-11-17 06:07:51 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-11-17 06:07:51 info: -------------------------------------------
+2023-11-17 06:07:53 info: All unit tests passed.
+2023-11-17 06:07:55 info: All steps were completed successfully
+2023-11-17 06:15:42 info: --------------------------------------------
+2023-11-17 06:15:42 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-11-17 06:15:42 info: --------------------------------------------
+2023-11-17 06:15:42 warn: A unit test file was not provided.
+2023-11-17 06:15:45 info: All steps were completed successfully
+2023-11-17 06:16:58 info: --------------------------------------------
+2023-11-17 06:16:58 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-11-17 06:16:58 info: --------------------------------------------
+2023-11-17 06:16:58 warn: A unit test file was not provided.
+2023-11-17 06:16:59 error: *** ESLint Report ***
+
+ex4-shoppingCart.js
+  26:28  error  'item' is defined but never used  no-unused-vars
+  27:7   error  'grocery' is not defined          no-undef
+  30:25  error  'grocery' is not defined          no-undef
+  32:25  error  'grocery' is not defined          no-undef
+
+✖ 4 problems (4 errors, 0 warnings)
+
+
+2023-11-17 06:17:21 info: --------------------------------------------
+2023-11-17 06:17:21 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-11-17 06:17:21 info: --------------------------------------------
+2023-11-17 06:17:21 warn: A unit test file was not provided.
+2023-11-17 06:17:24 info: All steps were completed successfully
+2023-11-17 06:18:23 info: --------------------------------------------
+2023-11-17 06:18:23 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-11-17 06:18:23 info: --------------------------------------------
+2023-11-17 06:18:23 warn: A unit test file was not provided.
+2023-11-17 06:18:26 info: All steps were completed successfully
+2023-11-17 06:22:33 info: ------------------------------------------------
+2023-11-17 06:22:33 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-11-17 06:22:33 info: ------------------------------------------------
+2023-11-17 06:22:33 warn: A unit test file was not provided.
+2023-11-17 06:22:36 info: All steps were completed successfully
+2023-11-17 06:31:00 info: -----------------------------------------
+2023-11-17 06:31:00 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-11-17 06:31:00 info: -----------------------------------------
+2023-11-17 06:31:00 warn: A unit test file was not provided.
+2023-11-17 06:31:03 info: All steps were completed successfully
+2023-11-17 06:42:20 info: -------------------------------------------
+2023-11-17 06:42:20 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2023-11-17 06:42:20 info: -------------------------------------------
+2023-11-17 06:42:20 warn: A unit test file was not provided.
+2023-11-17 06:42:21 error: *** ESLint Report ***
+
+ex7-mindPrivacy.js
+  35:12  warning  'employee' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-11-17 06:49:41 info: -------------------------------------------
+2023-11-17 06:49:41 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2023-11-17 06:49:41 info: -------------------------------------------
+2023-11-17 06:49:41 warn: A unit test file was not provided.
+2023-11-17 06:49:44 info: All steps were completed successfully
