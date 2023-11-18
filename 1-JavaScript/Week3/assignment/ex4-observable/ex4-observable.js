@@ -17,13 +17,33 @@ function createObservable() {
   const subscribers = [];
   return {
     subscribe: function (subscriber) {
-      // TODO complete this function
+      subscribers.push(subscriber);
+      
     },
     notify: function (message) {
-      // TODO complete this function
+      for(let i = 0 ; i <subscribers.length ; i++){
+        subscribers[i](message);
+      }
     },
   };
 }
+
+
+const myObservable = createObservable();
+
+function subscriber1(message) {
+  console.log(`Subscriber 1 received message: ${message}`);
+}
+
+function subscriber2(message) {
+  console.log(`Subscriber 2 received message: ${message}`);
+}
+
+myObservable.subscribe(subscriber1);
+myObservable.subscribe(subscriber2);
+
+myObservable.notify('Hello from Ali Othman!');
+
 
 // ! Do not change or remove the code below
 module.exports = createObservable;
