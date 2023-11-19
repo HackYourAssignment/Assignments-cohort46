@@ -29,26 +29,12 @@ const employeeRecords = [
   },
 ];
 
-// ! Function under test
-
-function filterPrivateData(employeeRecord) {
-  const filteredRecords = employeeRecord.map((item) => {
-    const { name, occupation, email } = item;
-    return { name, occupation, email };
-  });
-  return filteredRecords;
-
+// ! Function under test.
 function filterPrivateData(employeeRecords) {
-  const nonPrivate = [];
-  for(let employee of employeeRecords){
-  const {name, occupation, email} = employee;
-  const newRecord = {name, occupation, email};
-  
-  nonPrivate.push(newRecord);
-  }
-  return(nonPrivate);
+  return employeeRecords.map(({ gender, salary, ...rest }) => rest);
+};
 
-}
+console.log(filterPrivateData(employeeRecords));
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {

@@ -17,55 +17,42 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-Java
    your name.
    Use `console.log` each time to display the return value of the
    `giveCompliment` function to the console.
-
 -----------------------------------------------------------------------------*/
+   function giveCompliment(name) {
+        //  TODO complete this function
+        let compliment = [
+          "great",
+          "awesome",
+          "powerful",
+          "brave",
+          "clever",
+          "smart",
+          "handsome",
+          "brilliant",
+          "beautiful",
+          "wonderful",
+          "interesting",
+        ];
+        let randomIndex = Math.floor(Math.random() * compliment.length);
+        let randomCompliment = compliment[randomIndex];
 
-function giveCompliment(name) {
-  const compliments = [
-    'good',
-    'great',
-    'awesome',
-    'amazing',
-    'fantastic',
-    'impressive',
-    'super',
-    'perfect',
-    'superb',
-    'terrific',
-  ];
+        return `you are ${randomCompliment}, ${name}!`;
+      }
+      function main() {
+        const myName = "Bilal";
 
-  const currentCompliment =
-    compliments[Math.floor(Math.random() * compliments.length)];
-  return `You are ${currentCompliment}, ${name}!`;
-}
+        console.log(giveCompliment(myName));
+        console.log(giveCompliment(myName));
+        console.log(giveCompliment(myName));
 
-function main() {
-  const myName = 'Erhan';
-=======
-function giveCompliment(name) {
-  const compliments = ['great','awesome','fantastic','wonderful','cool',
-'cheerful','grateful','beautiful','gorgeous','thoughtful'];
- const compliment = compliments[Math.floor(Math.random()* (compliments.length))];
+        const yourName = "Ale";
 
-return (`You are ${compliment}, ${name}!`);
+        console.log(giveCompliment(yourName));
+        console.log(giveCompliment(yourName));
+        console.log(giveCompliment(yourName));
+      }
 
-}
-
-function main() {
-  // TODO substitute your own name for "HackYourFuture"
-  const myName = 'Ahmad';
-
-
-  console.log(giveCompliment(myName));
-  console.log(giveCompliment(myName));
-  console.log(giveCompliment(myName));
-
-  const yourName = 'Amsterdam';
-
-  console.log(giveCompliment(yourName));
-  console.log(giveCompliment(yourName));
-  console.log(giveCompliment(yourName));
-}
+      main();
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
