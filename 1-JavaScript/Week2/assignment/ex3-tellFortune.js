@@ -32,67 +32,47 @@ body, this code is now written once only in a separated function.
 -----------------------------------------------------------------------------*/
 
 // This function should take an array as its parameter and return
-// a randomly selected element as its return value.
-function selectRandomly(array) {
+//  a randomly selected element as its return value.
+ function selectRandomly(arrays) {
+        let randomIndex = Math.floor(Math.random() * arrays.length);
+        return arrays[randomIndex];
+      }
 
-  return array[Math.floor(Math.random() * array.length)];
-}
+      function tellFortune(numKids, partnerNames, locations, jobTitles) {
+        const numKidsRt = selectRandomly(numKids); // Rt(result)
+        const partnerNameRt = selectRandomly(partnerNames);
+        const locationRt = selectRandomly(locations);
+        const jobTitleRt = selectRandomly(jobTitles);
+        return `You will be a ${jobTitleRt} in ${locationRt}, married to ${partnerNameRt} with ${numKidsRt} kids.`;
+      }
 
-function tellFortune(numKids, partnerName, location, jobTitle) {
-  const job = selectRandomly(jobTitle);
-  const city = selectRandomly(location);
-  const partner = selectRandomly(partnerName);
-  const numberOfKids = selectRandomly(numKids);
-  return `You will be a ${job} in ${city}, married to ${partner} with ${numberOfKids} kids.`;
-}
+      function main() {
+        const numKids = ["one", "two", "three", "four", "five", "six"];
 
-function main() {
-  const numKids = [1, 2, 3, 4, 5];
+        const partnerNames = ["bilal", "ali", "adam", "ale", "mai"];
 
-  const partnerNames = ['Sarah', 'Jasmine', 'Saskia', 'Marine', 'Yvonne'];
+        const locations = [
+          "newyork",
+          "canada",
+          "amsterdam",
+          "den haag",
+          "paris",
+        ];
 
-  const locations = ['Rotterdam', 'Amsterdam', 'Den Hag', 'Arnhem', 'Utrecht'];
+        const jobTitles = [
+          "manager",
+          "developer",
+          "teacher",
+          "driver",
+          "engineer",
+        ];
 
-  const jobTitles = ['carpenter', 'developer', 'driver', 'doctor', 'manager'];
+        console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+        console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+        console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+      }
 
-  return(array[Math.floor(Math.random()*(array.length))]);
-}
-
-function tellFortune(numKids,partnerNames,locations,jobTitles) {
- const numKid = selectRandomly(numKids);
- const partnerName = selectRandomly(partnerNames);
- const location = selectRandomly(locations);
- const jobTitle = selectRandomly(jobTitles);
- return(`You will be a ${jobTitle} in ${location}, married to ${partnerName} with ${numKid} kids.`);
-
-}
-
-function main() {
-  const numKids = [
-    '2','1','3','4','5'
-  ];
-
-  const partnerNames = [
-    'Lia','Marry','Nour','Ola','Zoha'
-  ];
-
-  const locations = [
-   'Amsterdam','Rotterdam','Berlin','Paris','London'
-  ];
-
-  const jobTitles = [
-    'Architect','Civil engineer','Developer','Tester','Actor'
-  ];
-
-  const fortune1 = tellFortune(numKids, partnerNames, locations, jobTitles);
-  const fortune2 = tellFortune(numKids, partnerNames, locations, jobTitles);
-  const fortune3 = tellFortune(numKids, partnerNames, locations, jobTitles);
-
-  console.log(fortune1);
-  console.log(fortune2);
-  console.log(fortune3);
-}
-
+      main();
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
   main();
