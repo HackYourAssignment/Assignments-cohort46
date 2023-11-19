@@ -1,0 +1,4 @@
+
+*** Spell Checker Report ***
+
+/Users/mariamisaeva/Desktop/HYF-Bootcamp/Assignments-cohort46/1-JavaScript/Week2/assignment/ex1-giveCompliment.js:32:21 - Unknown word (Mariam)
