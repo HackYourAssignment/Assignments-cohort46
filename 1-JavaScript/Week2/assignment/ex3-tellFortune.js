@@ -1,6 +1,6 @@
 'use strict';
 /*------------------------------------------------------------------------------
-Full description at: https://github.com/HackYourFuture/Assignments/tree/main/1-JavaScript/Week3#exercise-3-be-your-own-fortune-teller
+Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-3-be-your-own-fortune-teller
 
 Why pay a fortune teller when you can just program your fortune yourself?
 
@@ -33,30 +33,30 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-function selectRandomly(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function selectRandomly(info) {
+  const randomNumMaxToMin = Math.floor(Math.random() * (info.length + 1)); //To find random number between Max and Min
+  const selectedInfo = info[randomNumMaxToMin]; //To find random info
+  return selectedInfo;
 }
 
-function tellFortune(/* TODO add parameter(s) here */) {
-  // TODO complete this function
+function tellFortune(numKids, partnerName, locations, jobTitles) {
+  const job = selectRandomly(jobTitles);
+  const location = selectRandomly(locations);
+  const partner = selectRandomly(partnerName);
+  const kids = selectRandomly(numKids);
+  const fortune = `You will be a ${job} in ${location}, married to ${partner} with ${kids} kids.`;
+
+  return fortune;
 }
 
 function main() {
-  const numKids = [
-    // TODO add elements here
-  ];
+  const numKids = [2, 1, 4, 3];
 
-  const partnerNames = [
-    // TODO add elements here
-  ];
+  const partnerNames = ['Jonson', 'Michel', 'Lina', 'Anna'];
 
-  const locations = [
-    // TODO add elements here
-  ];
+  const locations = ['Amsterdam', 'London', 'Tokyo', 'Tibet'];
 
-  const jobTitles = [
-    // TODO add elements here
-  ];
+  const jobTitles = ['CEO', 'Teacher', 'Driver', 'DevOps'];
 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
