@@ -51,28 +51,16 @@ body, this code is now written once only in a separated function.
 
         const partnerNames = ["bilal", "ali", "adam", "ale", "mai"];
 
-        const locations = [
-          "newyork",
-          "canada",
-          "amsterdam",
-          "den haag",
-          "paris",
-        ];
+        const locations = [ "newyork", "canada","amsterdam","den haag","paris"];
 
-        const jobTitles = [
-          "manager",
-          "developer",
-          "teacher",
-          "driver",
-          "engineer",
-        ];
+        const jobTitles = ["manager", "developer", "teacher", "driver", "engineer"];
 
         console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
         console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
         console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
       }
 
-      main();
+
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
   main();
