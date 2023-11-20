@@ -20,35 +20,39 @@ instead!
 
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
-const cartForParty =  [
-  {item:"chips" , preis: 1.90 },
-  {item:"cake" , preis: 3 },
-  {item:"banana" , preis: 1 },
-  {item:"cola" , preis: 2.40 },
-  {item:"cookies" , preis: 1.50 },
-  {item:"popcorn" , preis: 1 }
+const cartForParty = [
+  { item: "chips", preis: 1.90 },
+  { item: "cake", preis: 3 },
+  { item: "banana", preis: 1 },
+  { item: "cola", preis: 2.40 },
+  { item: "cookies", preis: 1.50 },
+  { item: "popcorn", preis: 1 }
 ];
 
-let totalePries = cartForParty.reduce(function( accumulated , current){
-  return accumulated + current.preis ;
-},0)
+// Calculate total price function
+function calculateTotalPrice(cart) {
+  return cart.reduce(function (accumulated, current) {
+    return accumulated + current.preis;
+  }, 0);
+}
 
-console.log(`Total:${totalePries}`);
+let totalPreis = calculateTotalPrice(cartForParty);
 
-// ! Test functions (plain vanilla JavaScript)
+console.log(`Total: ${totalPreis}`);
+
+// Test functions
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  // TODO replace this comment with your code
+  const result = calculateTotalPrice.length === 1 ? 'Pass' : 'Fail';
+  console.log(result);
 }
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-  // TODO replace this comment with your code
+  const result = calculateTotalPrice(cartForParty) === 10.30 ? 'Pass' : 'Fail';
+  console.log(result);
 }
 
-function test() {
-  test1();
-  test2();
-}
-
+// Run tests
 test();
+
