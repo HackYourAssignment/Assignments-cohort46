@@ -20,7 +20,7 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-Java
 -----------------------------------------------------------------------------*/
    function giveCompliment(name) {
         //  TODO complete this function
-        let compliment = [
+        let compliments = [
           "great",
           "awesome",
           "powerful",
@@ -33,8 +33,8 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-Java
           "wonderful",
           "interesting",
         ];
-        let randomIndex = Math.floor(Math.random() * compliment.length);
-        let randomCompliment = compliment[randomIndex];
+        let randomIndex = Math.floor(Math.random() * compliments.length);
+        let randomCompliment = compliments[randomIndex];
 
         return `you are ${randomCompliment}, ${name}!`;
       }
@@ -52,7 +52,7 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-Java
         console.log(giveCompliment(yourName));
       }
 
-      main();
+     
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
