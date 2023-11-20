@@ -1,4 +1,7 @@
 'use strict';
+
+const { sum } = require("lodash");
+
 /*------------------------------------------------------------------------------
 Full description atL https://github.com/HackYourFuture/Assignments/tree/main/1-JavaScript/Week4#exercise-2-whats-your-monday-worth
 
@@ -31,9 +34,16 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function computeEarnings(tasks , rate) {
+let gains = tasks.map(task => task.duration * rate/60)
+let totalGains = gains.reduce((sum, gains) => sum + gains, 0)
+let lastGains = `€${totalGains.toFixed(2)}`
+return lastGains;
+
+
+
 }
+console.log(computeEarnings(mondayTasks, hourlyRate));
 
 // ! Unit tests (using Jest)
 describe('computeEarnings', () => {

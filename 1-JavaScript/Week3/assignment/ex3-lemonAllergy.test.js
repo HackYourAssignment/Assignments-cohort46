@@ -26,26 +26,43 @@ const fruitBasket = [
 ];
 
 // ! Function under test
-function sanitizeFruitBasket(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function sanitizeFruitBasket(fruitBasket, fruitNeedsRemove) {
+  const cleanFruitsBasket = fruitBasket.filter(fruit => fruit !== fruitNeedsRemove);
+  return cleanFruitsBasket;
+
 }
 
 // ! Unit tests (using Jest)
 describe('sanitizeFruitBasket', () => {
   test('should take two parameters', () => {
-    // TODO replace next line with your code
-    expect(false).toBe(true);
+   expect(sanitizeFruitBasket.length).toBe(2);
   });
 
   test('should not modify the original `fruitBasket` array', () => {
     // Save the original contents of the fruit basket
     const originalFruitBasketContents = [...fruitBasket];
-    // TODO replace next line with your code
-    expect(false).toBe(true);
+   sanitizeFruitBasket(fruitBasket, lemon)
+    expect(fruitBasket).toEqual(originalFruitBasketContents); 
   });
-
-  test('should return a new array that does not include the unwanted `lemon`', () => {
-    // TODO replace next line with your code
-    expect(false).toBe(true);
+    // ! toEqual: Used when you want to check that two objects have the same value. This matcher recursively checks the equality of all fields, rather than checking for object identity.
+    // ! Optionally, you can provide a type for the expected value via a generic. This is particularly useful for ensuring expected objects have the right structure.
+  
+    test('should return a new array that does not include the unwanted `lemon`', () => {
+      const cleanFruitsBasket = sanitizeFruitBasket(fruitBasket, 'lemon');
+      expect(cleanFruitsBasket).toEqual([
+           'apple',
+           'grapefruit',
+           'banana',
+           'watermelon',
+         ]);
+    });
   });
-});
+  
+  //! can we put it like this ?!
+  
+  
+  // test('should return a new array that does not include the unwanted `lemon`', () => {
+  //     const cleanFruitsBasket = sanitizeFruitBasket(fruitBasket, 'lemon');
+  //     expect(cleanFruitsBasket).not.toContain('lemon');
+  //   });
+  
