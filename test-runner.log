@@ -1,0 +1,73 @@
+2023-11-19 03:16:42 info: ------------------------------------------------------
+2023-11-19 03:16:42 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-11-19 03:16:42 info: ------------------------------------------------------
+2023-11-19 03:16:44 info: All unit tests passed.
+2023-11-19 03:16:48 info: All steps were completed successfully
+2023-11-19 05:00:56 info: -------------------------------------------------
+2023-11-19 05:00:56 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-11-19 05:00:56 info: -------------------------------------------------
+2023-11-19 05:00:58 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js
+  computeEarnings
+    √ should take two parameters (2 ms)
+    × should compute the earnings as a formatted Euro amount (3 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "187.50"
+
+      53 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      54 |     const expected = '€187.50';
+    > 55 |     expect(result).toBe(expected);
+         |                    ^
+      56 |   });
+      57 | });
+      58 |
+
+      at Object.toBe (1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js:55:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.431 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2023-11-19 05:02:28 info: -------------------------------------------------
+2023-11-19 05:02:28 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-11-19 05:02:28 info: -------------------------------------------------
+2023-11-19 05:02:30 info: All unit tests passed.
+2023-11-19 05:02:33 info: All steps were completed successfully
+2023-11-19 05:02:52 info: -------------------------------------------------
+2023-11-19 05:02:52 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-11-19 05:02:52 info: -------------------------------------------------
+2023-11-19 05:02:54 info: All unit tests passed.
+2023-11-19 05:02:57 info: All steps were completed successfully
+2023-11-20 02:28:20 info: -------------------------------------------------
+2023-11-20 02:28:20 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-20 02:28:20 info: -------------------------------------------------
+2023-11-20 02:28:22 info: All unit tests passed.
+2023-11-20 02:28:26 info: All steps were completed successfully
+2023-11-20 06:21:12 info: ------------------------------------------
+2023-11-20 06:21:12 info: >>> Running Unit Test `ex4-observable` <<<
+2023-11-20 06:21:12 info: ------------------------------------------
+2023-11-20 06:21:15 info: All unit tests passed.
+2023-11-20 06:21:20 info: All steps were completed successfully
+2023-11-21 04:43:17 info: --------------------------------------
+2023-11-21 04:43:17 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-11-21 04:43:17 info: --------------------------------------
+2023-11-21 04:43:19 error: *** Unit Test Error Report ***
+
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+✕ wallet q5: The owner of the wallet with insufficient funds is?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="C:\office\hyf_course\assignment\Assignments-cohort46\test-runner\CustomReporter.js"
+2023-11-21 04:45:23 info: --------------------------------------
+2023-11-21 04:45:23 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-11-21 04:45:23 info: --------------------------------------
+2023-11-21 04:45:25 info: All unit tests passed.
+2023-11-21 04:45:29 info: All steps were completed successfully
