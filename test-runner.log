@@ -1,0 +1,155 @@
+2023-11-17 11:19:02 info: -------------------------------------------
+2023-11-17 11:19:02 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-11-17 11:19:02 info: -------------------------------------------
+2023-11-17 11:19:03 error: *** Unit Test Error Report ***
+
+✕ tellFortune should call function `selectRandomly` for each of its arguments
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/burhanelaldi/Assignments-cohort46/test-runner/CustomReporter.js"
+2023-11-17 11:19:04 error: *** ESLint Report ***
+
+ex3-tellFortune.js
+  45:7  warning  'index' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-11-17 11:19:05 error: *** Spell Checker Report ***
+
+/Users/burhanelaldi/Assignments-cohort46/1-JavaScript/Week2/assignment/ex3-tellFortune.js:67:56 - Unknown word (Willem)
+
+2023-11-17 11:50:18 info: -------------------------------------------
+2023-11-17 11:50:18 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-11-17 11:50:18 info: -------------------------------------------
+2023-11-17 11:50:19 info: All unit tests passed.
+2023-11-17 11:50:20 error: *** Spell Checker Report ***
+
+/Users/burhanelaldi/Assignments-cohort46/1-JavaScript/Week2/assignment/ex3-tellFortune.js:52:56 - Unknown word (Willem)
+
+2023-11-17 11:51:34 info: -------------------------------------------
+2023-11-17 11:51:34 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-11-17 11:51:34 info: -------------------------------------------
+2023-11-17 11:51:35 error: *** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  selectRandomly() is not called the expected number of times
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/burhanelaldi/Assignments-cohort46/test-runner/CustomReporter.js"
+2023-11-17 11:51:36 error: *** Spell Checker Report ***
+
+/Users/burhanelaldi/Assignments-cohort46/1-JavaScript/Week2/assignment/ex3-tellFortune.js:52:56 - Unknown word (Willem)
+
+2023-11-20 08:11:38 info: ------------------------------------------------------
+2023-11-20 08:11:38 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-11-20 08:11:38 info: ------------------------------------------------------
+2023-11-20 08:11:39 info: All unit tests passed.
+2023-11-20 08:11:40 info: All steps were completed successfully
+2023-11-20 08:28:32 info: -------------------------------------------------
+2023-11-20 08:28:32 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-11-20 08:28:32 info: -------------------------------------------------
+2023-11-20 08:28:33 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✕ should take two parameters (1 ms)
+    ✕ should compute the earnings as a formatted Euro amount (1 ms)
+
+  ● computeEarnings › should take two parameters
+
+    expect(received).toHaveLength(expected)
+
+    Expected length:   2
+    Received length:   0
+    Received function: [Function computeEarnings]
+
+      41 |     // The `.length` property indicates the number of parameters expected by
+      42 |     // the function.
+    > 43 |     expect(computeEarnings).toHaveLength(2);
+         |                             ^
+      44 |   });
+      45 |
+      46 |   test('should compute the earnings as a formatted Euro amount', () => {
+
+      at Object.toHaveLength (1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js:43:29)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: undefined
+
+      47 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      48 |     const expected = '€187.50';
+    > 49 |     expect(result).toBe(expected);
+         |                    ^
+      50 |   });
+      51 | });
+      52 |
+
+      at Object.toBe (1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js:49:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 total
+Snapshots:   0 total
+Time:        0.216 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2023-11-20 08:28:39 info: Disclaimer turned off
+2023-11-20 09:14:03 info: -------------------------------------------------
+2023-11-20 09:14:03 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-11-20 09:14:03 info: -------------------------------------------------
+2023-11-20 09:14:04 info: All unit tests passed.
+2023-11-20 09:14:06 info: All steps were completed successfully
+2023-11-20 11:19:52 info: -------------------------------------------------
+2023-11-20 11:19:52 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-20 11:19:52 info: -------------------------------------------------
+2023-11-20 11:19:53 info: All unit tests passed.
+2023-11-20 11:19:55 info: All steps were completed successfully
+2023-11-21 05:50:06 info: ------------------------------------------
+2023-11-21 05:50:06 info: >>> Running Unit Test `ex4-observable` <<<
+2023-11-21 05:50:06 info: ------------------------------------------
+2023-11-21 05:50:07 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-observable.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex4-observable/ex4-observable.test.js
+  createObservable
+    ✓ should exist and be a function (1 ms)
+    ✓ should return an object with `subscribe` and a `notify` function properties
+    ✕ should notify all subscribers of any notification
+
+  ● createObservable › should notify all subscribers of any notification
+
+    ReferenceError: subscriber is not defined
+
+      23 |     notify: function (message) {
+      24 |       // TODO complete this function
+    > 25 |       subscriber(message);
+         |       ^
+      26 |     },
+      27 |   };
+      28 | }
+
+      at Object.subscriber [as notify] (1-JavaScript/Week3/assignment/ex4-observable/ex4-observable.js:25:7)
+      at Object.notify (1-JavaScript/Week3/assignment/ex4-observable/ex4-observable.test.js:27:16)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.231 s
+Ran all test suites matching /ex4-observable.test.js/i.
+2023-11-21 05:50:08 error: *** ESLint Report ***
+
+ex4-observable/ex4-observable.js
+  25:7  error  'subscriber' is not defined  no-undef
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-11-21 05:50:51 info: ------------------------------------------
+2023-11-21 05:50:51 info: >>> Running Unit Test `ex4-observable` <<<
+2023-11-21 05:50:51 info: ------------------------------------------
+2023-11-21 05:50:51 info: All unit tests passed.
+2023-11-21 05:50:53 info: All steps were completed successfully
