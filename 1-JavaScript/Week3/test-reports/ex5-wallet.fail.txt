@@ -1,0 +1,9 @@
+*** Unit Test Error Report ***
+
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+✕ wallet q5: The owner of the wallet with insufficient funds is?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="C:\Users\user\OneDrive\سطح المكتب\Assignments-cohort46\test-runner\CustomReporter.js"
+*** Spell Checker Report ***
+
