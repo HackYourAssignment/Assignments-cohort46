@@ -23,8 +23,16 @@ you have more than 3 items in your shopping cart the first item gets taken out.
 const shoppingCart = ['bananas', 'milk'];
 
 // ! Function to be tested
-function addToShoppingCart(/* parameters go here */) {
-  // TODO complete this function
+function addToShoppingCart(item) {
+
+  // If array length is exactly equal to 3, execute '.shift', if not nothing will happen
+  if (shoppingCart.length >= 3){
+    shoppingCart.shift(); // removes the first element from an array (element at index 0)
+  }
+  if (item) { // checks whether the item exists and is truthy
+    shoppingCart.push(item); // if item is truthy, add item to the end of the shoppingCart array
+  }
+  return `You bought ${shoppingCart.join(', ')}!`; // .join() returns an array as a string and does not change the original one
 }
 
 // ! Test functions (plain vanilla JavaScript)

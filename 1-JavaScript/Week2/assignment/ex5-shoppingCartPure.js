@@ -16,8 +16,17 @@ it pure. Do the following:
 5. Confirm that you function passes the provided unit tests.
 ------------------------------------------------------------------------------*/
 // ! Function under test
-function addToShoppingCart(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function addToShoppingCart(shoppingCartList, groceryItem) {
+
+  const newShoppingCartList = [...shoppingCartList]; // used spread operator to copy the contents of the existing shopping cart list 
+
+  if (newShoppingCartList.length >= 3){
+    newShoppingCartList.shift(); // if newShopping... has three or more elements, it will remove first element from array
+  }
+  if (groceryItem){
+    newShoppingCartList.push(groceryItem); // if groceryItem exists (true), it will be added to the end of newShopping... array
+  }
+  return newShoppingCartList; // returns the updated shopping list
 }
 
 // ! Test functions (plain vanilla JavaScript)
