@@ -11,7 +11,7 @@ Let's rewrite it (or _refactor_ it, as experienced developers would call it):
 ------------------------------------------------------------------------------*/
 // ! Function to be tested
 function doubleEvenNumbers(numbers) {
-  // TODO rewrite the function body using `map` and `filter`.
+ 
   return numbers.filter(function(number) {
     return number % 2 === 0;
   })
@@ -30,7 +30,7 @@ console.log(result);
 // ! second methods 
 
 // function doubleEvenNumbers(numbers) {
-//    TODO rewrite the function body using `map` and `filter`.
+
 //   const newNumbers = [];
 //   for (let i of numbers) {
 //     if (numbers[i] % 2 === 0) {
