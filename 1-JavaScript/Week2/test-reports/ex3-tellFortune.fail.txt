@@ -1,0 +1,10 @@
+*** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  selectRandomly() is not called the expected number of times
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/burhanelaldi/Assignments-cohort46/test-runner/CustomReporter.js"
+*** Spell Checker Report ***
+
+/Users/burhanelaldi/Assignments-cohort46/1-JavaScript/Week2/assignment/ex3-tellFortune.js:52:56 - Unknown word (Willem)

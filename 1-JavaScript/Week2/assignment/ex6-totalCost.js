@@ -21,22 +21,57 @@ instead!
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
 const cartForParty = {
-  // TODO complete this object
+  chocolate: 2.99,
+  chips: 2.79,
+  cocaCola: 1.99,
+  bread: 0.99,
+  rice: 2.5,
 };
+// I found this method via: https://www.freecodecamp.org/news/how-to-iterate-over-objects-in-javascript/
 
-function calculateTotalPrice(/* TODO parameter(s) go here */) {
-  // TODO replace this comment with your code
+function calculateTotalPrice(cartForParty) {
+  let totalCost = 0;
+  const products = Object.keys(cartForParty);
+
+  products.forEach((product) => {
+    totalCost = totalCost + cartForParty[product];
+  });
+
+  const resultString = `Total: €${totalCost}`;
+
+  console.log(resultString);
+  return resultString;
 }
+calculateTotalPrice(cartForParty);
 
 // ! Test functions (plain vanilla JavaScript)
+// Test function
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  // TODO replace this comment with your code
+
+  if (calculateTotalPrice.length === 1) {
+    console.log('Test 1 Passed!');
+  } else {
+    console.error(
+      `Test 1 Failed. calculateTotalPrice expected to have 1 parameter, but it has ${calculateTotalPrice.length}.`
+    );
+  }
 }
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-  // TODO replace this comment with your code
+
+  const result = calculateTotalPrice(cartForParty);
+  const expectedOutput = 'Total: €11.26';
+
+  console.assert(
+    result === expectedOutput,
+    `Test 2 Failed! Expected "${expectedOutput}", but got "${result}"`
+  );
+
+  if (result === expectedOutput) {
+    console.log('Test 2 Passed!');
+  }
 }
 
 function test() {
