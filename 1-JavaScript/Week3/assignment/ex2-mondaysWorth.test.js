@@ -11,41 +11,44 @@ Full description atL https://github.com/HackYourFuture/Assignments/tree/main/1-J
   `duration` property with a number value.
 ------------------------------------------------------------------------------*/
 const mondayTasks = [
-  {
-    name: 'Daily standup',
-    duration: 30, // specified in minutes
-  },
-  {
-    name: 'Feature discussion',
-    duration: 120,
-  },
-  {
-    name: 'Development time',
-    duration: 240,
-  },
-  {
-    name: 'Talk to different members from the product team',
-    duration: 60,
-  },
+    {
+        name: 'Daily standup',
+        duration: 30, // specified in minutes
+    },
+    {
+        name: 'Feature discussion',
+        duration: 120,
+    },
+    {
+        name: 'Development time',
+        duration: 240,
+    },
+    {
+        name: 'Talk to different members from the product team',
+        duration: 60,
+    },
 ];
 
 const hourlyRate = 25;
 
-function computeEarnings(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function computeEarnings(array, rate) {
+
+    const totalEarnings = array.map(task => task.duration / 60 * rate).reduce((total, cur) => total + cur, 0);
+
+    return `€${totalEarnings.toFixed(2)}`;
 }
 
 // ! Unit tests (using Jest)
 describe('computeEarnings', () => {
-  test('should take two parameters', () => {
-    // The `.length` property indicates the number of parameters expected by
-    // the function.
-    expect(computeEarnings).toHaveLength(2);
-  });
+    test('should take two parameters', () => {
+        // The `.length` property indicates the number of parameters expected by
+        // the function.
+        expect(computeEarnings).toHaveLength(2);
+    });
 
-  test('should compute the earnings as a formatted Euro amount', () => {
-    const result = computeEarnings(mondayTasks, hourlyRate);
-    const expected = '€187.50';
-    expect(result).toBe(expected);
-  });
+    test('should compute the earnings as a formatted Euro amount', () => {
+        const result = computeEarnings(mondayTasks, hourlyRate);
+        const expected = '€187.50';
+        expect(result).toBe(expected);
+    });
 });
