@@ -1,1 +1,16 @@
 /* Write your style here */
+.alreadyRead {
+  margin: 5px;
+  padding: 5px;
+  display: inline-block;
+  background-color: green;
+  width: 30%;
+}
+
+.notReadYet {
+  margin: 5px;
+  padding: 5px;
+  display: inline-block;
+  background-color: red;
+  width: 30%;
+}
