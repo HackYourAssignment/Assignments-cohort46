@@ -1,0 +1,4 @@
+
+*** Spell Checker Report ***
+
+/Users/hackyourfuture/Desktop/HYF/Assignments-cohort46/2-Browsers/Week1/assignment/ex2-aboutMe/index.js:14:18 - Unknown word (Nacatamal)
