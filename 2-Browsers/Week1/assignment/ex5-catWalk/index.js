@@ -39,7 +39,6 @@ function catWalk() {
     }, 5000);
   }
   count += 10;
-  console.log(count);
   catImg.style.left = `${count}px`;
   if (count >= screenWidth) {
     count = 0;
