@@ -43,6 +43,7 @@
     "acorn": "^8.8.0",
     "acorn-walk": "^8.2.0",
     "chalk": "^4.0.0",
+    "clone": "^2.1.2",
     "comment-json": "^4.2.3",
     "cryptr": "^6.0.3",
     "cspell": "^6.10.1",

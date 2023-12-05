@@ -9,4 +9,12 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
 
-// TODO add your JavaScript code here.
+document.getElementById('nickname').textContent = 'Burhan Elaldi';
+document.getElementById('fav-food').textContent = 'Hamburger and fries';
+document.getElementById('hometown').textContent = 'Turkey';
+
+// Iterate through each <li> and change the class to 'list-item'
+const listItems = document.querySelectorAll('li');
+listItems.forEach((item) => {
+  item.className = 'list-item';
+});
