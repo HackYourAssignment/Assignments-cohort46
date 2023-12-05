@@ -8,11 +8,11 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
    HackYourFuture logo instead.
 ------------------------------------------------------------------------------*/
 function hijackGoogleLogo() {
-  const googleLogo = document.querySelector('img[alt="Google"]');
-  googleLogo.src = 'https://www.hackyourfuture.dk/static/logo-dark.svg';
-  googleLogo.srcset =
+  const logo = document.querySelector('img[alt="Google"]');
+  logo.src = 'https://www.hackyourfuture.dk/static/logo-dark.svg';
+  logo.srcset =
     'https://www.hackyourfuture.dk/static/logo-dark.svg 480w, https://www.hackyourfuture.dk/static/logo-dark.svg 800w';
-  googleLogo.sizes = '(max-width: 600px) 480px,800px';
+  logo.sizes = '(max-width: 600px) 480px,800px';
 }
 
 hijackGoogleLogo();
