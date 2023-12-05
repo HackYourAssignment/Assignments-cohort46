@@ -18,7 +18,30 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 //cspell: enable
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
+  const ulElement = document.createElement('ul');
+
+  books.forEach((book) => {
+    const liElement = document.createElement('li');
+    const pElement = document.createElement('p');
+    const imgElement = document.createElement('img');
+
+    pElement.textContent = `${book.title} by ${book.author}`;
+
+    // I used here chatgpt to find the URLs in my assets file
+    const formattedTitle = book.title.replace(/\s+/g, '_').toLowerCase();
+    imgElement.src = `./assets/${formattedTitle}.jpg`; 
+
+
+    liElement.appendChild(pElement);
+    liElement.appendChild(imgElement);
+
+    liElement.style.backgroundColor = book.alreadyRead ? "green" : "red";
+
+
+    ulElement.appendChild(liElement);
+  });
+
+  return ulElement;
 }
 
 function main() {
