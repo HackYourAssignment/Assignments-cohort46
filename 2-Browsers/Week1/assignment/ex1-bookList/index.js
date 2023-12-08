@@ -18,50 +18,7 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 -----------------------------------------------------------------------------*/
 //cspell: enable
 
-function createBookList(books) {
-  // create ul elem
-  const ul = document.createElement('ul');
-
-  //Iterate through each book in arr
-  books.forEach((book) => {
-    //li for each book
-    const li = document.createElement('li');
-    //p elem for book info
-    const p = document.createElement('p');
-    p.textContent = `${book.title} by ${book.author}`;
-    //Append p to li
-    li.appendChild(p);
-    //img elem for book cover
-    const img = document.createElement('img');
-    img.src = `./assets/${book.image}`;
-    //Append img to li
-    li.appendChild(img);
-    //set b.g for li based on read or unread
-    li.style.backgroundColor = book.alreadyRead ? 'green' : 'red';
-    //Append li to ul
-    ul.appendChild(li);
-  });
-  // Apply styles directly to ul
-  ul.style.listStyleType = 'none';
-  ul.style.padding = '0';
-  ul.style.margin = '0';
-
-  // Get all li elements
-  const liElements = ul.querySelectorAll('li');
-
-  // Apply styles directly to li elements
-  liElements.forEach((li) => {
-    li.style.display = 'inline-block';
-    li.style.textAlign = 'center';
-    li.style.color = 'white';
-    li.style.fontWeight = 'bold';
-    li.style.width = '400px';
-    li.style.margin = '8px';
-    li.style.padding = '8px';
-  });
-  //Return ul
-  return ul;
-}
+function createBookList(books) {}
 
 function main() {
   const myBooks = [
