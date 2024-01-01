@@ -14,12 +14,14 @@ function addCurrentTime() {
   hElement.textContent = formattedTime;
   document.body.appendChild(hElement);
 
-  setInterval(function () {
+  function setTheTimer() {
     const currentTime = new Date();
     const formattedTime = currentTime.toLocaleTimeString();
     hElement.textContent = formattedTime;
-    console.log(formattedTime);
-  }, 1000);
+    return setTheTimer;
+  }
+
+  setInterval(setTheTimer(), 1000);
 }
 
 window.addEventListener('load', addCurrentTime);

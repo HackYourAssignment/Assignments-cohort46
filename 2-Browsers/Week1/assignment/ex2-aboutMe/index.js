@@ -8,11 +8,16 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
    `list-item`.
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
-document.querySelector('#nickname').textContent = 'Erhan';
-document.querySelector('#fav-food').textContent = 'Kebap';
-document.querySelector('#hometown').textContent = 'Goes';
 
-const listItems = document.querySelectorAll('li');
-listItems.forEach((item) => {
-  item.className = 'list-item';
-});
+function main() {
+  document.querySelector('#nickname').textContent = 'Erhan';
+  document.querySelector('#fav-food').textContent = 'Kebap';
+  document.querySelector('#hometown').textContent = 'Goes';
+
+  const listItems = document.querySelectorAll('li');
+  listItems.forEach((item) => {
+    item.className = 'list-item';
+  });
+}
+
+window.addEventListener('load', main);
