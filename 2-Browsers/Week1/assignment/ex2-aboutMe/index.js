@@ -9,4 +9,16 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
 
-// TODO add your JavaScript code here.
+const myData = ['Tenzijn', 'momo', 'Karze,Kham,Tibet'];
+const spans = document.querySelectorAll('span');
+const listItems = document.querySelectorAll('li');
+
+// Entering the data in the span
+spans.forEach((span, index) => {
+  span.textContent = myData[index];
+});
+
+// adding the class list-item to the list
+listItems.forEach((listItem) => {
+  listItem.classList.add('list-item');
+});
