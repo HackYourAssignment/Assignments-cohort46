@@ -23,27 +23,39 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 -----------------------------------------------------------------------------*/
 let myImg = document.getElementsByTagName("img")[0];
 
-
 function catWalk() {
-  // TODO complete this function
-  myImg.style.left = parseInt(myImg.style.left) + 10 + "px";
+  let currentLeft = parseInt(myImg.style.left) || 0; 
 
-  if (parseInt(myImg.style.left) >= window.innerWidth / 2) {
-  myImg.src = "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
+  if (currentLeft >= window.innerWidth / 2 && currentLeft < window.innerWidth / 2 + 10) {
+    
+    myImg.src = "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
+
+    
+    clearInterval(catWalkInterval);
+
+    
+    setTimeout(function () {
+      myImg.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif";
+      
+      
+      catWalkInterval = setInterval(catWalk, 50);
+    }, 5000);
   }
 
-  if (parseInt(myImg.style.left) >= window.innerWidth) {
-  myImg.style.left = "0px";
-  myImg.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif";
+  if (currentLeft >= window.innerWidth) {
+    myImg.style.left = "0px";
+  } else {
+    myImg.style.left = currentLeft + 10 + "px";
   }
 }
 
-window.onload = function(){
-  myImg.style.left = "0px";
-  setInterval(catWalk, 500);
-  };
+let catWalkInterval;
 
-// TODO execute `catWalk` when the browser has completed loading the page
+window.onload = function () {
+  myImg.style.left = "0px";
+  catWalkInterval = setInterval(catWalk, 50);
+};
+
 
 
 
