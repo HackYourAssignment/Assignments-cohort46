@@ -20,14 +20,14 @@ instead!
 
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
-const cartForParty = [
-  { item: "chips", preis: 1.90 },
-  { item: "cake", preis: 3 },
-  { item: "banana", preis: 1 },
-  { item: "cola", preis: 2.40 },
-  { item: "cookies", preis: 1.50 },
-  { item: "popcorn", preis: 1 }
-];
+const cartForParty = {
+  chips: 1.90,
+  cake: 3,
+  banana: 1,
+  cola: 2.40,
+  cookies: 1.50,
+  popcorn: 1
+};
 
 // Calculate total price function
 function calculateTotalPrice(cart) {
@@ -49,7 +49,7 @@ function test1() {
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-  const result = calculateTotalPrice(cartForParty) === 10.30 ? 'Pass' : 'Fail';
+  const result = calculateTotalPrice(cartForParty) === 10.80 ? 'Pass' : 'Fail';
   console.log(result);
 }
 
