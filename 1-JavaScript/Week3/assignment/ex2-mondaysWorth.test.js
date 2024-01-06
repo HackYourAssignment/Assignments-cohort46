@@ -33,11 +33,8 @@ const hourlyRate = 25;
 
 
 function computeEarnings(tasks, hourlyRate) {
-  const earningsPerTask = tasks.map(task => (task.duration) * 0.41666667).reduce((acc,cur)=>acc+cur,0).toFixed(2)
-
- 
-
-  return earningsPerTask ;
+  const earningsPerTask = tasks.map(task => (task.duration * hourlyRate / 60).toFixed(2));
+  return earningsPerTask;
 }
 
 // Example usage
