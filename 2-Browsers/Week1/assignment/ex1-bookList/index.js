@@ -28,10 +28,9 @@ function createBookList(books) {
       const imgElement = document.createElement('img');
   
       pElement.textContent = `${book.title} by ${book.author}`;
-  
-      imgElement.src = `https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg`;
       
-  
+      imgElement.src = `./assets/${book.title.replace(/ /g, '_')}.jpg`;
+      
       liElement.appendChild(pElement);
       liElement.appendChild(imgElement);
   
