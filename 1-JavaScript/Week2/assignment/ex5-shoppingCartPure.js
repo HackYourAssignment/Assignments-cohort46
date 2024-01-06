@@ -19,15 +19,14 @@ it pure. Do the following:
 
 let shoppingCart = ["bananas", "milk"];
 
-function addToShoppingCart(item , ...more) {
-  shoppingCart.push(item && more);
+function addToShoppingCart(cart, item) {
+  
+  const newShoppingCart = [...cart, item].slice(0, 3);
 
-  if (shoppingCart.length <=3) {
-    shoppingCart.shift();
-  }
-
-  let groceries = shoppingCart.join(",");
+  let groceries = newShoppingCart.join(", ");
   return `You bought ${groceries}`;
 }
 
-console.log(addToShoppingCart("hummus","coch"));
+console.log(addToShoppingCart(shoppingCart, "hummus"));
+
+console.log(shoppingCart);

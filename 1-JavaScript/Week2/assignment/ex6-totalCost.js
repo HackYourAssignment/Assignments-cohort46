@@ -20,14 +20,14 @@ instead!
 
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
-const cartForParty =  [
-  {item:"chips" , preis: 1.90 },
-  {item:"cake" , preis: 3 },
-  {item:"banana" , preis: 1 },
-  {item:"cola" , preis: 2.40 },
-  {item:"cookies" , preis: 1.50 },
-  {item:"popcorn" , preis: 1 }
-];
+const cartForParty = {
+  chips: 1.90,
+  cake: 3,
+  banana: 1,
+  cola: 2.40,
+  cookies: 1.50,
+  popcorn: 1
+};
 
 let totalePries = cartForParty.reduce(function( accumulated , current){
   return accumulated + current.preis ;
@@ -39,11 +39,23 @@ console.log(`Total:${totalePries}`);
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
   // TODO replace this comment with your code
+  if (calculateTotalPrice.length === 1) {
+    console.log('Passed!');
+  } else {
+    console.log('Failed!');
+  }
 }
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
   // TODO replace this comment with your code
+  const result = calculateTotalPrice(cartForParty);
+  if (result === 'Total: €11.30') {
+    console.log('Passed!');
+  } else {
+    console.log('Failed!');
+    console.log(`Expected: Total: €11.30, Actual: ${result}`);
+  }
 }
 
 function test() {

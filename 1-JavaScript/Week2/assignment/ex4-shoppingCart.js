@@ -25,11 +25,16 @@ const shoppingCart = ["bananas", "milk"];
 
 // Step 2: Define the addToShoppingCart function
 function addToShoppingCart(groceryItem) {
-  shoppingCart.push(groceryItem); // Add the new grocery item to the end of the array
+
+  if (!groceryItem || groceryItem.trim() === "") {
+    return "Invalid item. Please provide a valid grocery item.";
+  }
 
   if (shoppingCart.length === 3) {
     shoppingCart.shift(); // Remove the first item if there are more than three items
   }
+
+  shoppingCart.push(groceryItem); // Add the new grocery item to the end of the array
 
   // Create a comma-separated list of items from the shopping cart
   const itemList = shoppingCart.join(", ");
