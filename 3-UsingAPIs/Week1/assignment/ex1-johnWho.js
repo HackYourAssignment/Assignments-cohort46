@@ -1,4 +1,7 @@
 'use strict';
+
+const { first } = require('lodash');
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Assignments/tree/main/3-UsingAPIs/Week1#exercise-1-john-who
 
@@ -9,6 +12,7 @@ Rewrite this function, but replace the callback syntax with the Promise syntax:
   didn't pass in a first name!"
 ------------------------------------------------------------------------------*/
 // TODO see above
+/*------------------------------------------------------------------------------
 const getAnonName = (firstName, callback) => {
   setTimeout(() => {
     if (!firstName) {
@@ -20,6 +24,25 @@ const getAnonName = (firstName, callback) => {
 
     callback(fullName);
   }, 1000);
+};
+
+function main() {
+  getAnonName('John', console.log);
+}
+------------------------------------------------------------------------------*/
+const getAnonName = (firstName) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (!firstName) {
+        reject(new Error("You didn't pass in a first name!"));
+        return;
+      }
+
+      const fullName = `${firstName} Doe`;
+
+      resolve(fullName);
+    }, 1000);
+  });
 };
 
 function main() {
