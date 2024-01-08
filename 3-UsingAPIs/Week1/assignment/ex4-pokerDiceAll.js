@@ -27,9 +27,11 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+
+  const rollPromises = dice.map((die) => rollDie(die));
+
+  return Promise.all(rollPromises);
 }
 
 function main() {
@@ -37,6 +39,8 @@ function main() {
     .then((results) => console.log('Resolved!', results))
     .catch((error) => console.log('Rejected!', error.message));
 }
+
+//When a promise is rejected, it doesn't stop the execution of the asynchronous operations that were initiated before the rejection. Promises are settled asynchronously, and their rejections do not affect the execution of other asynchronous tasks that are already in progress.
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
