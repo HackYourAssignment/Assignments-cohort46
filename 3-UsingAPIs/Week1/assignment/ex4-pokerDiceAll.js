@@ -29,13 +29,28 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 function rollDice() {
   // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
-}
+
+  function rollDicePromise(eachDice) {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            res(`${eachDice}`);
+        }, 1000); // Simulating a delay of 1000 milliseconds (1 second)
+    });
+  };
+
+  const arrayOfRollDicePromises = dice.map(rollDicePromise);
+
+  return Promise.all(arrayOfRollDicePromises);
+};
 
 function main() {
   rollDice()
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
+      .then((resolvedValue) => {
+          console.log('Resolved!', resolvedValue);
+      })
+      .catch((rejectedValue) => {
+          console.log('Rejected!', rejectedValue);
+      });
 }
 
 // ! Do not change or remove the code below
@@ -43,3 +58,10 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+/*
+    The resaen that rejected promise allows the athour resolved dice that have not
+    yet finished their roll to continue because The behavior of promises in JavaScript 
+    is designed to be non-blocking and asynchronous wich can handel
+    more than one opration in the same time.
+*/
