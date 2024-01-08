@@ -1,0 +1,4 @@
+
+*** Spell Checker Report ***
+
+/Users/hackyourfuture/Desktop/HYF/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:53:24 - Unknown word (stackoverflow)

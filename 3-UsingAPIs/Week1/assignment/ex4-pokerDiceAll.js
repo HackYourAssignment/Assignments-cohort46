@@ -27,9 +27,11 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  const promiseArray = dice.map((num) => {
+    return rollDie(num);
+  })
+  return Promise.all(promiseArray);
 }
 
 function main() {
@@ -43,3 +45,22 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+
+/* Looked at the definition of Promise.all() in MDN
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
+
+and then found this in stackoverflow https://stackoverflow.com/questions/42304394/why-does-javascripts-promise-all-not-run-all-promises-in-failure-conditions
+
+one person said: 
+"Remember, a promise is not the async operation itself. 
+A promise is just an object that keeps track of the state of the async operation. 
+So, when you pass an array of promises to Promise.all(), 
+all those async operations have already been started and are all in-flight already.
+They won't be stopped or cancelled."
+
+MEANING (my understanding) -> Although the promise is rejected, the other operations that had already started
+can't be stopped or cancelled and we will notice those outputs even though there was a rejection, however,
+that means no new operations will be picked up after that
+
+*/
