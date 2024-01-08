@@ -21,43 +21,55 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-const catImg = document.querySelector('img');
-  const dancingCatUrl = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
-  const orgSrc = "http://www.anniemation.com/clip_art/images/cat-walk.gif"
-  let isDancing = false;
 
-  function catWalk() {
-    const currentLeft = parseFloat(catImg.style.left) || 0;
+const STEP_SIZE_PX = 10;
 
-    if (!isDancing) {
-     
-      catImg.style.left = `${currentLeft + 10}px`;
+const DANCE_TIME_MS = 5000;
+const DANCING_CAT_URL =
+  'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
 
-  
-      const screenWidth = window.innerWidth;
-      const catWidth = catImg.width;
-      if (currentLeft + catWidth >= screenWidth) {
-       
-        catImg.style.left = '0px';
-      }
+function walk(img, startPos, stopPos, cb) {
+  let currentPos = startPos;
 
-     
-      const middle = screenWidth / 2;
-      if (currentLeft + catWidth / 2 >= middle && !isDancing) {
-       
-        isDancing = true;
-        catImg.src = dancingCatUrl;
+  function step() {
+    currentPos += STEP_SIZE_PX;
+    img.style.left = `${currentPos}px`;
 
-        
-        setTimeout(() => {
-          isDancing = false;
-          catImg.src = orgSrc ;
-        }, 5000);
-      }
+    if (currentPos < stopPos) {
+      requestAnimationFrame(step);
+    } else {
+      cb(); // Invoke the callback when the walking is complete
     }
   }
 
-  
-  window.addEventListener('load', () => {
-    setInterval(catWalk, 50);
-  });
+  step();
+}
+
+function dance(img, cb) {
+  const originalSrc = img.src;
+  img.src = DANCING_CAT_URL;
+
+  setTimeout(() => {
+    img.src = originalSrc;
+    cb(); // Invoke the callback when the dancing is complete
+  }, DANCE_TIME_MS);
+}
+
+function catWalk() {
+  const img = document.querySelector('img');
+  const startPos = -img.width;
+  const centerPos = (window.innerWidth - img.width) / 2;
+  const stopPos = window.innerWidth;
+
+  function walkAndDance() {
+    walk(img, startPos, centerPos, () => {
+      dance(img, () => {
+        walk(img, centerPos, stopPos, walkAndDance); // Repeat the cycle
+      });
+    });
+  }
+
+  walkAndDance();
+}
+
+window.addEventListener('load', catWalk);
