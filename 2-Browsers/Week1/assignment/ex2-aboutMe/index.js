@@ -10,3 +10,15 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 ------------------------------------------------------------------------------*/
 
 // TODO add your JavaScript code here.
+//1
+const nickName = document.getElementById('nickname');
+const favoriteFood = document.getElementById('fav-food') ;
+const homeTown = document.getElementById('hometown');
+nickName.textContent = 'Jasem'
+favoriteFood.textContent = 'Pasta';
+homeTown.textContent = 'Aleppo';
+//2
+const listItems =  document.querySelectorAll('li');
+listItems.forEach((item)=>{
+   item.className = 'list-item'
+})
