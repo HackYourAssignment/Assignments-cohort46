@@ -8,7 +8,8 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
    HackYourFuture logo instead.
 ------------------------------------------------------------------------------*/
 function hijackGoogleLogo() {
-  // TODO your code goes in here
-}
+const logo = document.getElementById('logo');
+logo.style.backgroundImage = url(https://avatars.githubusercontent.com/u/20858568?s=200&v=4);
+};
 
 hijackGoogleLogo();
