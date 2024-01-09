@@ -54,3 +54,11 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDie;
+
+
+/* 
+The problem in the original code happens due to the callbacks. Since they're happening in an async way, other
+calls may still be in progress even when the error condition is met. 
+In the other hand, with promises, once a promise is resolved or rejected, other calls are ignored, which ensures that 
+once the die rolls off the table and the reject is called, no further resolutions will be processed. 
+*/
