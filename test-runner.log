@@ -1,0 +1,923 @@
+2023-11-20 10:59:45 info: ------------------------------------------------------
+2023-11-20 10:59:45 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-11-20 10:59:45 info: ------------------------------------------------------
+2023-11-20 10:59:51 info: All unit tests passed.
+2023-11-20 10:59:59 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:00:21 info: Disclaimer turned off
+2023-11-20 11:00:48 info: -------------------------------------------------
+2023-11-20 11:00:48 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-11-20 11:00:48 info: -------------------------------------------------
+2023-11-20 11:00:53 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js
+  computeEarnings
+    √ should take two parameters (4 ms)
+    × should compute the earnings as a formatted Euro amount (7 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€11250"
+
+      53 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      54 |     const expected = '€187.50';
+    > 55 |     expect(result).toBe(expected);
+         |                    ^
+      56 |   });
+      57 | });
+      58 |
+
+      at Object.toBe (1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js:55:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        1.212 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2023-11-20 11:01:01 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:02:57 info: -------------------------------------------------
+2023-11-20 11:02:57 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-11-20 11:02:57 info: -------------------------------------------------
+2023-11-20 11:03:03 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js
+  computeEarnings
+    √ should take two parameters (4 ms)
+    × should compute the earnings as a formatted Euro amount (6 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€187.5"
+
+      53 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      54 |     const expected = '€187.50';
+    > 55 |     expect(result).toBe(expected);
+         |                    ^
+      56 |   });
+      57 | });
+      58 |
+
+      at Object.toBe (1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js:55:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        1.29 s, estimated 2 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2023-11-20 11:03:10 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:03:33 info: -------------------------------------------------
+2023-11-20 11:03:33 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-11-20 11:03:33 info: -------------------------------------------------
+2023-11-20 11:03:39 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js
+  computeEarnings
+    √ should take two parameters (4 ms)
+    × should compute the earnings as a formatted Euro amount (8 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€1875"
+
+      53 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      54 |     const expected = '€187.50';
+    > 55 |     expect(result).toBe(expected);
+         |                    ^
+      56 |   });
+      57 | });
+      58 |
+
+      at Object.toBe (1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js:55:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        1.278 s, estimated 2 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2023-11-20 11:03:47 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:05:42 info: -------------------------------------------------
+2023-11-20 11:05:42 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-11-20 11:05:42 info: -------------------------------------------------
+2023-11-20 11:05:48 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js
+  computeEarnings
+    √ should take two parameters (4 ms)
+    × should compute the earnings as a formatted Euro amount (8 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€012.5050.00100.0025.00"
+
+      53 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      54 |     const expected = '€187.50';
+    > 55 |     expect(result).toBe(expected);
+         |                    ^
+      56 |   });
+      57 | });
+      58 |
+
+      at Object.toBe (1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js:55:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        1.193 s, estimated 2 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2023-11-20 11:05:56 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:06:33 info: -------------------------------------------------
+2023-11-20 11:06:33 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-11-20 11:06:33 info: -------------------------------------------------
+2023-11-20 11:06:39 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js
+  computeEarnings
+    √ should take two parameters (5 ms)
+    × should compute the earnings as a formatted Euro amount (6 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€187.5"
+
+      53 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      54 |     const expected = '€187.50';
+    > 55 |     expect(result).toBe(expected);
+         |                    ^
+      56 |   });
+      57 | });
+      58 |
+
+      at Object.toBe (1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js:55:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        1.401 s, estimated 2 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2023-11-20 11:06:47 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:07:16 info: -------------------------------------------------
+2023-11-20 11:07:16 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-11-20 11:07:16 info: -------------------------------------------------
+2023-11-20 11:07:22 info: All unit tests passed.
+2023-11-20 11:07:30 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:08:03 info: -------------------------------------------------
+2023-11-20 11:08:03 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-20 11:08:03 info: -------------------------------------------------
+2023-11-20 11:08:09 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (4 ms)
+    × should not modify the original `fruitBasket` array (6 ms)
+    × should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    TypeError: fruitBasket is not iterable
+
+      29 | function sanitizeFruitBasket(fruitBasket,lemon) {
+      30 |   // TODO complete this function
+    > 31 |   const newBasket = [...fruitBasket];
+         |                         ^
+      32 |   newBasket.filter((fruit)=>{
+      33 |     fruit !== 'lemon'
+      34 |   })
+
+      at fruitBasket (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:31:25)
+      at Object.sanitizeFruitBasket (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:44:12)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      49 |     const originalFruitBasketContents = [...fruitBasket];
+      50 |     // TODO replace next line with your code
+    > 51 |     expect(false).toBe(true);
+         |                   ^
+      52 |   });
+      53 |
+      54 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+
+      at Object.toBe (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:51:19)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      54 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      55 |     // TODO replace next line with your code
+    > 56 |     expect(false).toBe(true);
+         |                   ^
+      57 |   });
+      58 | });
+      59 |
+
+      at Object.toBe (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:56:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
+Snapshots:   0 total
+Time:        1.241 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-11-20 11:08:16 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:14:57 info: -------------------------------------------------
+2023-11-20 11:14:57 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-20 11:14:57 info: -------------------------------------------------
+2023-11-20 11:15:03 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (3 ms)
+    √ should not modify the original `fruitBasket` array (3 ms)
+    × should return a new array that does not include the unwanted `lemon` (3 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    TypeError: fruitBasket is not iterable
+
+      29 | function sanitizeFruitBasket(fruitBasket, lemon) {
+      30 |   // TODO complete this function
+    > 31 |   const newBasket = [...fruitBasket];
+         |                         ^
+      32 |   newBasket.filter((fruit) => {
+      33 |     fruit !== 'lemon';
+      34 |   });
+
+      at fruitBasket (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:31:25)
+      at Object.sanitizeFruitBasket (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:43:12)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      53 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      54 |     // TODO replace next line with your code
+    > 55 |     expect(false).toBe(true);
+         |                   ^
+      56 |   });
+      57 | });
+      58 |
+
+      at Object.toBe (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:55:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        1.244 s, estimated 2 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-11-20 11:15:10 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:16:18 info: -------------------------------------------------
+2023-11-20 11:16:18 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-20 11:16:18 info: -------------------------------------------------
+2023-11-20 11:16:24 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (3 ms)
+    √ should not modify the original `fruitBasket` array (4 ms)
+    × should return a new array that does not include the unwanted `lemon` (4 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    ReferenceError: lemon is not defined
+
+      41 |   test('should take two parameters', () => {
+      42 |     // TODO replace next line with your code
+    > 43 |     expect(sanitizeFruitBasket(fruitBasket, lemon)).toHaveLength(2);
+         |                                             ^
+      44 |   });
+      45 |
+      46 |   test('should not modify the original `fruitBasket` array', () => {
+
+      at Object.lemon (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:43:45)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      53 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      54 |     // TODO replace next line with your code
+    > 55 |     expect(false).toBe(true);
+         |                   ^
+      56 |   });
+      57 | });
+      58 |
+
+      at Object.toBe (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:55:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        1.399 s, estimated 2 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-11-20 11:16:32 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:21:25 info: -------------------------------------------------
+2023-11-20 11:21:25 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-20 11:21:25 info: -------------------------------------------------
+2023-11-20 11:21:31 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (2 ms)
+    √ should not modify the original `fruitBasket` array (4 ms)
+    × should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    TypeError: fruitBasket is not iterable
+
+      29 | function sanitizeFruitBasket(fruitBasket, lemon) {
+      30 |   // TODO complete this function
+    > 31 |   const originalFruitBasketContents = [...fruitBasket];
+         |                                           ^
+      32 |   fruitBasket.filter((fruit) => {
+      33 |     fruit != 'lemon';
+      34 |   });
+
+      at fruitBasket (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:31:43)
+      at Object.sanitizeFruitBasket (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:43:12)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    ReferenceError: originalFruitBasketContents is not defined
+
+      53 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      54 |     // TODO replace next line with your code
+    > 55 |     expect(fruitBasket).not.toBe(originalFruitBasketContents);
+         |                                  ^
+      56 |   });
+      57 | });
+      58 |
+
+      at Object.originalFruitBasketContents (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:55:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        1.351 s, estimated 2 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-11-20 11:21:38 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:22:48 info: -------------------------------------------------
+2023-11-20 11:22:48 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-20 11:22:48 info: -------------------------------------------------
+2023-11-20 11:22:54 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (2 ms)
+    √ should not modify the original `fruitBasket` array (3 ms)
+    × should return a new array that does not include the unwanted `lemon`
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    TypeError: fruitBasket is not iterable
+
+      29 | function sanitizeFruitBasket(fruitBasket, lemon) {
+      30 |   // TODO complete this function
+    > 31 |   const originalFruitBasketContents = [...fruitBasket];
+         |                                           ^
+      32 |   fruitBasket.filter((fruit) => {
+      33 |     fruit != 'lemon';
+      34 |   });
+
+      at fruitBasket (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:31:43)
+      at Object.sanitizeFruitBasket (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:41:12)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    ReferenceError: originalFruitBasketContents is not defined
+
+      51 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      52 |     // TODO replace next line with your code
+    > 53 |     expect(fruitBasket).not.toEqual(originalFruitBasketContents);
+         |                                     ^
+      54 |   });
+      55 | });
+      56 |
+
+      at Object.originalFruitBasketContents (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:53:37)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        1.245 s, estimated 2 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-11-20 11:23:01 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:36:05 info: -------------------------------------------------
+2023-11-20 11:36:05 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-20 11:36:05 info: -------------------------------------------------
+2023-11-20 11:36:10 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (3 ms)
+    √ should not modify the original `fruitBasket` array (4 ms)
+    √ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    TypeError: fruitBasket is not iterable
+
+      29 | function sanitizeFruitBasket(fruitBasket, lemon) {
+      30 |   // TODO complete this function
+    > 31 |   const originalFruitBasketContents = [...fruitBasket];
+         |                                           ^
+      32 |
+      33 |   const newBasket = fruitBasket.filter((fruit) => {
+      34 |     fruit !== lemon;
+
+      at fruitBasket (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:31:43)
+      at Object.sanitizeFruitBasket (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:44:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        1.257 s, estimated 2 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-11-20 11:36:18 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:37:33 info: -------------------------------------------------
+2023-11-20 11:37:33 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-20 11:37:33 info: -------------------------------------------------
+2023-11-20 11:37:39 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (2 ms)
+    √ should not modify the original `fruitBasket` array (4 ms)
+    √ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    ReferenceError: lemon is not defined
+
+      42 |   test('should take two parameters', () => {
+      43 |     // TODO replace next line with your code
+    > 44 |     expect(sanitizeFruitBasket(fruitBasket, lemon)).toHaveLength(2);
+         |                                             ^
+      45 |   });
+      46 |
+      47 |   test('should not modify the original `fruitBasket` array', () => {
+
+      at Object.lemon (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:44:45)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        1.285 s, estimated 2 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-11-20 11:37:46 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:38:55 info: -------------------------------------------------
+2023-11-20 11:38:55 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-20 11:38:55 info: -------------------------------------------------
+2023-11-20 11:39:00 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (2 ms)
+    √ should not modify the original `fruitBasket` array (4 ms)
+    √ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    ReferenceError: lemon is not defined
+
+      42 |   test('should take two parameters', () => {
+      43 |     // TODO replace next line with your code
+    > 44 |     expect(sanitizeFruitBasket(fruitBasket, lemon)).toContain(2);
+         |                                             ^
+      45 |   });
+      46 |
+      47 |   test('should not modify the original `fruitBasket` array', () => {
+
+      at Object.lemon (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:44:45)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        1.265 s, estimated 2 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-11-20 11:39:08 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:40:54 info: -------------------------------------------------
+2023-11-20 11:40:54 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-20 11:40:54 info: -------------------------------------------------
+2023-11-20 11:41:00 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (3 ms)
+    √ should not modify the original `fruitBasket` array (3 ms)
+    √ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    TypeError: fruitBasket is not iterable
+
+      29 | function sanitizeFruitBasket(fruitBasket, lemon) {
+      30 |   // TODO complete this function
+    > 31 |   const originalFruitBasketContents = [...fruitBasket];
+         |                                           ^
+      32 |
+      33 |   const newBasket = fruitBasket.filter((fruit) => {
+      34 |     fruit !== lemon;
+
+      at fruitBasket (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:31:43)
+      at Object.sanitizeFruitBasket (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:44:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        1.272 s, estimated 2 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-11-20 11:41:07 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:42:56 info: -------------------------------------------------
+2023-11-20 11:42:56 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-20 11:42:56 info: -------------------------------------------------
+2023-11-20 11:43:02 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (2 ms)
+    √ should not modify the original `fruitBasket` array (4 ms)
+    √ should return a new array that does not include the unwanted `lemon`
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    TypeError: fruitBasket is not iterable
+
+      29 | function sanitizeFruitBasket(fruitBasket, lemon) {
+      30 |   // TODO complete this function
+    > 31 |   const originalFruitBasketContents = [...fruitBasket];
+         |                                           ^
+      32 |
+      33 |   const newBasket = fruitBasket.filter((fruit) => {
+      34 |     fruit !== lemon;
+
+      at fruitBasket (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:31:43)
+      at Object.sanitizeFruitBasket (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:44:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        1.336 s, estimated 2 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-11-20 11:43:10 error: *** Spell Checker Report ***
+
+
+2023-11-20 11:45:26 info: -------------------------------------------------
+2023-11-20 11:45:26 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-20 11:45:26 info: -------------------------------------------------
+2023-11-20 11:45:31 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (2 ms)
+    √ should not modify the original `fruitBasket` array (4 ms)
+    √ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    ReferenceError: lemon is not defined
+
+      42 |   test('should take two parameters', () => {
+      43 |     // TODO replace next line with your code
+    > 44 |     sanitizeFruitBasket(fruitBasket, lemon);
+         |                                      ^
+      45 |     expect(sanitizeFruitBasket).toHaveLength(2);
+      46 |   });
+      47 |
+
+      at Object.lemon (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:44:38)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        1.248 s, estimated 2 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-11-20 11:45:38 error: *** Spell Checker Report ***
+
+
+2023-11-20 05:47:08 info: ------------------------------------------
+2023-11-20 05:47:08 info: >>> Running Unit Test `ex4-observable` <<<
+2023-11-20 05:47:08 info: ------------------------------------------
+2023-11-20 05:47:14 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-observable.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex4-observable/ex4-observable.test.js
+  createObservable
+    √ should exist and be a function (4 ms)
+    √ should return an object with `subscribe` and a `notify` function properties (1 ms)
+    × should notify all subscribers of any notification (4 ms)
+
+  ● createObservable › should notify all subscribers of any notification
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: "Hi!"
+
+    Number of calls: 0
+
+      28 |
+      29 |     // Assert that both listeners have been called with the Hi! message
+    > 30 |     expect(listener1).toHaveBeenCalledWith('Hi!');
+         |                       ^
+      31 |     expect(listener2).toHaveBeenCalledWith('Hi!');
+      32 |   });
+      33 | });
+
+      at Object.toHaveBeenCalledWith (1-JavaScript/Week3/assignment/ex4-observable/ex4-observable.test.js:30:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        1.338 s
+Ran all test suites matching /ex4-observable.test.js/i.
+2023-11-20 05:47:22 error: *** Spell Checker Report ***
+
+
+2023-11-20 10:03:25 info: ------------------------------------------------------
+2023-11-20 10:03:25 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-11-20 10:03:25 info: ------------------------------------------------------
+2023-11-20 10:03:31 info: All unit tests passed.
+2023-11-20 10:03:39 error: *** Spell Checker Report ***
+
+
+2023-11-21 09:46:53 info: ------------------------------------------
+2023-11-21 09:46:53 info: >>> Running Unit Test `ex4-observable` <<<
+2023-11-21 09:46:53 info: ------------------------------------------
+2023-11-21 09:47:00 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-observable.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex4-observable/ex4-observable.test.js
+  createObservable
+    √ should exist and be a function (4 ms)
+    √ should return an object with `subscribe` and a `notify` function properties (1 ms)
+    × should notify all subscribers of any notification (5 ms)
+
+  ● createObservable › should notify all subscribers of any notification
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: "Hi!"
+
+    Number of calls: 0
+
+      28 |
+      29 |     // Assert that both listeners have been called with the Hi! message
+    > 30 |     expect(listener1).toHaveBeenCalledWith('Hi!');
+         |                       ^
+      31 |     expect(listener2).toHaveBeenCalledWith('Hi!');
+      32 |   });
+      33 | });
+
+      at Object.toHaveBeenCalledWith (1-JavaScript/Week3/assignment/ex4-observable/ex4-observable.test.js:30:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        1.354 s, estimated 2 s
+Ran all test suites matching /ex4-observable.test.js/i.
+2023-11-21 09:47:09 error: *** Spell Checker Report ***
+
+
+2023-11-21 09:48:14 info: ------------------------------------------
+2023-11-21 09:48:14 info: >>> Running Unit Test `ex4-observable` <<<
+2023-11-21 09:48:14 info: ------------------------------------------
+2023-11-21 09:48:20 error: *** Unit Test Error Report ***
+
+console.log
+    Hi!
+
+      at log (1-JavaScript/Week3/assignment/ex4-observable/ex4-observable.js:24:17)
+          at Array.forEach (<anonymous>)
+
+  console.log
+    Hi!
+
+      at log (1-JavaScript/Week3/assignment/ex4-observable/ex4-observable.js:24:17)
+          at Array.forEach (<anonymous>)
+
+
+
+Command failed: npx jest ex4-observable.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex4-observable/ex4-observable.test.js
+  createObservable
+    √ should exist and be a function (7 ms)
+    √ should return an object with `subscribe` and a `notify` function properties (2 ms)
+    × should notify all subscribers of any notification (39 ms)
+
+  ● createObservable › should notify all subscribers of any notification
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: "Hi!"
+
+    Number of calls: 0
+
+      28 |
+      29 |     // Assert that both listeners have been called with the Hi! message
+    > 30 |     expect(listener1).toHaveBeenCalledWith('Hi!');
+         |                       ^
+      31 |     expect(listener2).toHaveBeenCalledWith('Hi!');
+      32 |   });
+      33 | });
+
+      at Object.toHaveBeenCalledWith (1-JavaScript/Week3/assignment/ex4-observable/ex4-observable.test.js:30:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        1.434 s, estimated 2 s
+Ran all test suites matching /ex4-observable.test.js/i.
+2023-11-21 09:48:27 error: *** Spell Checker Report ***
+
+
+2023-11-21 09:53:32 info: ------------------------------------------
+2023-11-21 09:53:32 info: >>> Running Unit Test `ex4-observable` <<<
+2023-11-21 09:53:32 info: ------------------------------------------
+2023-11-21 09:53:38 info: All unit tests passed.
+2023-11-21 09:53:45 error: *** Spell Checker Report ***
+
+
+2023-11-21 09:54:33 info: --------------------------------------
+2023-11-21 09:54:33 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-11-21 09:54:33 info: --------------------------------------
+2023-11-21 09:54:40 error: *** Unit Test Error Report ***
+
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+✕ wallet q5: The owner of the wallet with insufficient funds is?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="C:\Users\user\OneDrive\سطح المكتب\Assignments-cohort46\test-runner\CustomReporter.js"
+2023-11-21 09:54:47 error: *** Spell Checker Report ***
+
+
+2023-11-21 09:55:30 info: ------------------------------------------------------
+2023-11-21 09:55:30 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-11-21 09:55:30 info: ------------------------------------------------------
+2023-11-21 09:55:35 info: All unit tests passed.
+2023-11-21 09:55:43 error: *** Spell Checker Report ***
+
+
+2023-11-21 09:55:54 info: -------------------------------------------------
+2023-11-21 09:55:54 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-11-21 09:55:54 info: -------------------------------------------------
+2023-11-21 09:56:00 info: All unit tests passed.
+2023-11-21 09:56:07 error: *** Spell Checker Report ***
+
+
+2023-11-21 09:56:25 info: -------------------------------------------------
+2023-11-21 09:56:25 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-21 09:56:25 info: -------------------------------------------------
+2023-11-21 09:56:30 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (2 ms)
+    √ should not modify the original `fruitBasket` array (3 ms)
+    √ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    ReferenceError: lemon is not defined
+
+      42 |   test('should take two parameters', () => {
+      43 |     // TODO replace next line with your code
+    > 44 |     sanitizeFruitBasket(fruitBasket, lemon);
+         |                                      ^
+      45 |     expect(sanitizeFruitBasket).toHaveLength(2);
+      46 |   });
+      47 |
+
+      at Object.lemon (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:44:38)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.999 s, estimated 2 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-11-21 09:56:38 error: *** Spell Checker Report ***
+
+
+2023-11-21 09:58:06 info: -------------------------------------------------
+2023-11-21 09:58:06 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-21 09:58:06 info: -------------------------------------------------
+2023-11-21 09:58:12 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (2 ms)
+    √ should not modify the original `fruitBasket` array (4 ms)
+    √ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    ReferenceError: lemon is not defined
+
+      42 |   test('should take two parameters', () => {
+      43 |     // TODO replace next line with your code
+    > 44 |     sanitizeFruitBasket(fruitBasket, lemon);
+         |                                      ^
+      45 |     expect(sanitizeFruitBasket).toHaveBeenCalledWith(2);
+      46 |   });
+      47 |
+
+      at Object.lemon (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:44:38)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        1.244 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-11-21 09:58:19 error: *** Spell Checker Report ***
+
+
+2023-11-21 10:02:51 info: -------------------------------------------------
+2023-11-21 10:02:51 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-21 10:02:51 info: -------------------------------------------------
+2023-11-21 10:02:56 info: All unit tests passed.
+2023-11-21 10:03:04 error: *** Spell Checker Report ***
+
+
+2023-11-21 10:03:29 info: -------------------------------------------------
+2023-11-21 10:03:29 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-11-21 10:03:29 info: -------------------------------------------------
+2023-11-21 10:03:34 info: All unit tests passed.
+2023-11-21 10:03:42 error: *** Spell Checker Report ***
+
+
