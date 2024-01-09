@@ -11,7 +11,6 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/3-U
   explanation? Add your answer as a comment to be bottom of the file.
 ------------------------------------------------------------------------------*/
 
-// TODO Remove callback and return a promise
 function rollDie() {
   return new Promise((resolve, reject) => {
     // Compute a random number of rolls (3-10) that the die MUST complete
@@ -25,13 +24,11 @@ function rollDie() {
 
       // Use callback to notify that the die rolled off the table after 6 rolls
       if (roll > 6) {
-        // TODO replace "error" callback
         reject(new Error('Oops... Die rolled off the table.'));
       }
 
       // Use callback to communicate the final die value once finished rolling
       if (roll === randomRollsToDo) {
-        // TODO replace "success" callback
         resolve(value);
       }
 
@@ -48,7 +45,7 @@ function rollDie() {
 
 /*------------------------------------------------------------------------------
 function main() {
-  // TODO Refactor to use promise
+
   rollDie((error, value) => {
     if (error !== null) {
       console.log(error.message);
@@ -59,7 +56,6 @@ function main() {
 }
 ------------------------------------------------------------------------------*/
 function main() {
-  // TODO Refactor to use promise
   rollDie()
     .then((value) => {
       console.log(`Success! Die settled on ${value}.`);
