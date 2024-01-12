@@ -1,4 +1,5 @@
 'use strict';
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-Browsers/Week1#exercise-5-the-cat-walk
 
@@ -21,8 +22,34 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-function catWalk() {
-  // TODO complete this function
-}
 
-// TODO execute `catWalk` when the browser has completed loading the page
+let position = 0; // setting globally (following advice) https://stackoverflow.com/questions/30673782/add-to-width-using-setinterval
+const catSteps = 10;
+const catImg = document.querySelector("img");
+let walking = true; // will use later to determine whether steps should be added or cat should stay still
+
+function catWalk() {
+  catImg.style.left = position; // set to 0 when func. gets called
+
+  if (walking) {
+    position += catSteps; // adding 10 every time only if it's walking
+  }
+
+  catImg.style.left = position + "px";
+
+  if (position > screen.width) { // when position is greater/equal to screen width https://stackoverflow.com/questions/10653019/how-to-find-the-screen-width-and-apply-it-to-a-particular-css
+    position = 0; // setting position back to 0
+  }
+
+  if (position >= screen.width / 2) { // checking if position is in the middle of screen
+    catImg.src = "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
+    walking = false;
+    setTimeout(() => {
+      walking = true;
+      catImg.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif"; // set img back to og
+    }, 5000); 
+  };
+};
+
+window.addEventListener("load", catWalk);
+setInterval(catWalk, 50);
