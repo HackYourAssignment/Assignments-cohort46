@@ -18,22 +18,22 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 //cspell: enable
 
 function createBookList(books) {
-  const ulElement = document.createElement("ul");
+  const ulElement = document.createElement('ul');
 
-  books.forEach(book => {
-    const p = document.createElement("p");
-    const li = document.createElement("li");
-    const img = document.createElement("img");
-    const asset = book.title.replaceAll(" ", "_"); // Replacing spaces in book.title with "_" so img name in assets matches with book title
+  books.forEach((book) => {
+    const p = document.createElement('p');
+    const li = document.createElement('li');
+    const img = document.createElement('img');
+    const bookTitle = book.title.toLowerCase();
+    const asset = bookTitle.replaceAll(' ', '_'); // Replacing spaces in book.title with "_" so img name in assets matches with book title
     img.src = `./assets/${asset}.jpg`;
-    
-    if (book.alreadyRead === true) {
-      li.className = "isRead";
-    } else {
-      li.className = "isNotRead";
-    };
+    img.alt = 'it is a nice book';
 
-    const bookContent = document.createTextNode(`Title: ${book.title}, Author: ${book.author}`);
+    li.className = book.alreadyRead ? 'isRead' : 'isNotRead';
+
+    const bookContent = document.createTextNode(
+      `Title: ${book.title}, Author: ${book.author}`
+    );
 
     p.appendChild(bookContent);
     li.append(p, img);
