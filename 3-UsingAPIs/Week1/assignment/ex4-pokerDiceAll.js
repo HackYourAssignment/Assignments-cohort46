@@ -17,3 +17,6 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+// In Promises, if one die is rejected, other dice continue their execution independently.
+// The rejection does not affect the remaining dice, showcasing non-blocking asynchronous behavior.
