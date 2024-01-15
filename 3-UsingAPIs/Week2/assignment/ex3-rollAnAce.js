@@ -39,7 +39,6 @@ async function main() {
     } catch (error) {
         console.log('Rejected!', error.message)
     }
-
     /*   rollDieUntil('ACE')
          .then((results) => console.log('Resolved!', results))
          .catch((error) => console.log('Rejected!', error.message));*/
