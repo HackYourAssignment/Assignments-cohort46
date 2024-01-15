@@ -47,3 +47,6 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDie;
+
+// The original issue with callbacks was that they could continue executing even after an error occurred. 
+// With promises, once an outcome (resolved or rejected) is determined, any further actions are ignored.
