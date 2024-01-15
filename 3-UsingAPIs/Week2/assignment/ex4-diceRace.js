@@ -15,15 +15,21 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  // TODO complete this function; use Promise.race() and rollDie()
+  const promises = dice.map(() => {
+    return rollDie();
+  });
+  return Promise.race(promises);
+}
+async function main() {
+  try {
+    const results = await rollDice();
+    console.log('Resolved!', results);
+  } catch (error) {
+    console.log('Rejected!', error.message);
+  }
 }
 
-// Refactor this function to use async/await and try/catch
-function main() {
-  rollDice()
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
-}
+//Promise.race returns only first resolved promise. Other promises are keep running.
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
