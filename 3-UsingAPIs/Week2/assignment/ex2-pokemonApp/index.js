@@ -42,19 +42,7 @@ async function fetchAndPopulatePokemons(apiUrl) {
     selectElement.addEventListener('change', async (event) => {
       const selectedIndex = event.target.value;
       const selectedPokemonUrl = `${apiUrl}/${selectedIndex}`;
-      try {
-        const pokemonData = await fetchData(selectedPokemonUrl);
-        const pokeImg =
-          document.getElementById('pokemonImage') ||
-          document.createElement('img');
-        pokeImg.id = 'pokemonImage';
-        pokeImg.src = pokemonData.sprites.front_default;
-        if (!document.getElementById('pokemonImage')) {
-          document.body.appendChild(pokeImg);
-        }
-      } catch (error) {
-        console.error(error);
-      }
+      await fetchImage(selectedPokemonUrl);
     });
 
     data.results.forEach((pokemon, index) => {
@@ -64,6 +52,21 @@ async function fetchAndPopulatePokemons(apiUrl) {
       selectElement.appendChild(optionElement);
     });
     return selectElement;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function fetchImage(selectedPokemonUrl) {
+  try {
+    const pokemonData = await fetchData(selectedPokemonUrl);
+    const pokeImg =
+      document.getElementById('pokemonImage') || document.createElement('img');
+    pokeImg.id = 'pokemonImage';
+    pokeImg.src = pokemonData.sprites.front_default;
+    if (!document.getElementById('pokemonImage')) {
+      document.body.appendChild(pokeImg);
+    }
   } catch (error) {
     console.error(error);
   }
