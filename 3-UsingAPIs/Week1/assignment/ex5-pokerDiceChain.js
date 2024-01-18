@@ -1,30 +1,16 @@
+const { i } = require('html-validate/dist/cjs/core');
 const rollDie = require('../../helpers/pokerDiceRoller');
 
-function rollDice() {
+async function rollDice() {
   
   const results = [];
-  
-  return rollDie(1)
-    .then((value) => {
-      results.push(value);
-      return rollDie(2);
-    })
-    .then((value2) => {
-      results.push(value2);
-      return rollDie(3);
-    })
-    .then((value3) => {
-      results.push(value3);
-      return rollDie(4);
-    })
-    .then((value4) => {
-      results.push(value4);
-      return rollDie(5);
-    })
-    .then((value5) => {
-      results.push(value5);
-      return results;
-    });
+
+  for(i = 0 ; i <= 5 ; i++){
+    const value = await rollDice(i)
+    results.push(value);
+  }
+
+  return results ;
 }
 
 function main() {
@@ -36,4 +22,4 @@ function main() {
 if (process.env.NODE_ENV !== 'test') {
   main();
 }
-module.exports = rollDice;
+module.exports = rollDie;
