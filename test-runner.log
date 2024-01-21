@@ -1,0 +1,1099 @@
+2024-01-12 06:49:13 info: ---------------------------------------
+2024-01-12 06:49:13 info: >>> Running Unit Test `ex1-johnWho` <<<
+2024-01-12 06:49:13 info: ---------------------------------------
+2024-01-12 06:49:17 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    √ should exist and be executable (2 ms)
+    × should have all TODO comments removed (1 ms)
+    √ `getAnonName` should not contain unneeded console.log calls (2 ms)
+    √ should call `new Promise()` (1 ms)
+    √ should take a single argument
+    √ `resolve()` should be called with a one argument
+    √ `reject()` should be called with a one argument (1 ms)
+    √ should resolve when called with a string argument (3 ms)
+    √ should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        0.869 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2024-01-12 06:52:14 info: ---------------------------------------
+2024-01-12 06:52:14 info: >>> Running Unit Test `ex1-johnWho` <<<
+2024-01-12 06:52:14 info: ---------------------------------------
+2024-01-12 06:52:17 info: All unit tests passed.
+2024-01-12 06:52:23 info: All steps were completed successfully
+2024-01-12 06:53:14 info: -------------------------------------------------
+2024-01-12 06:53:14 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2024-01-12 06:53:14 info: -------------------------------------------------
+2024-01-12 06:53:17 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-checkDoubleDigits.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex2-checkDoubleDigits.test.js
+  checkDoubleDigits
+    √ should exist and be executable (2 ms)
+    × should have all TODO comments removed (1 ms)
+    √ `checkDoubleDigits` should not contain unneeded console.log calls (1 ms)
+    √ should call new Promise()
+    √ `resolve()` should be called with a one argument (1 ms)
+    √ `reject()` should be called with a one argument
+    √ should be a function that takes a single argument
+    √ (9) should return a rejected promise with an Error object
+    × (10) should return a promise that resolves to "This is a double digit number!" (2 ms)
+    × (99) should return a promise that resolves to "This is a double digit number!" (1 ms)
+    √ (100) should return a rejected promise with an Error object
+
+  ● checkDoubleDigits › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● checkDoubleDigits › (10) should return a promise that resolves to "This is a double digit number!"
+
+    expect(received).resolves.toEqual(expected) // deep equality
+
+    Expected: StringContaining "This is a double digit number!"
+    Received: "This is a double-digit number!"
+
+      73 |     const promise = checkDoubleDigits(10);
+      74 |     expect(promise).toBeInstanceOf(Promise);
+    > 75 |     return expect(promise).resolves.toEqual(
+         |                                     ^
+      76 |       expect.stringContaining('This is a double digit number!')
+      77 |     );
+      78 |   });
+
+      at Object.toEqual (node_modules/expect/build/index.js:174:22)
+      at Object.toEqual (3-UsingAPIs/Week1/unit-tests/ex2-checkDoubleDigits.test.js:75:37)
+
+  ● checkDoubleDigits › (99) should return a promise that resolves to "This is a double digit number!"
+
+    expect(received).resolves.toEqual(expected) // deep equality
+
+    Expected: StringContaining "This is a double digit number!"
+    Received: "This is a double-digit number!"
+
+      82 |     const promise = checkDoubleDigits(99);
+      83 |     expect(promise).toBeInstanceOf(Promise);
+    > 84 |     return expect(promise).resolves.toEqual(
+         |                                     ^
+      85 |       expect.stringContaining('This is a double digit number!')
+      86 |     );
+      87 |   });
+
+      at Object.toEqual (node_modules/expect/build/index.js:174:22)
+      at Object.toEqual (3-UsingAPIs/Week1/unit-tests/ex2-checkDoubleDigits.test.js:84:37)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 8 passed, 11 total
+Snapshots:   0 total
+Time:        0.822 s
+Ran all test suites matching /ex2-checkDoubleDigits.test.js/i.
+2024-01-12 07:10:44 info: -------------------------------------------------
+2024-01-12 07:10:44 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2024-01-12 07:10:44 info: -------------------------------------------------
+2024-01-12 07:10:48 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-checkDoubleDigits.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex2-checkDoubleDigits.test.js
+  checkDoubleDigits
+    √ should exist and be executable (3 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ `checkDoubleDigits` should not contain unneeded console.log calls (2 ms)
+    √ should call new Promise()
+    √ `resolve()` should be called with a one argument (1 ms)
+    √ `reject()` should be called with a one argument
+    √ should be a function that takes a single argument (1 ms)
+    √ (9) should return a rejected promise with an Error object (1 ms)
+    × (10) should return a promise that resolves to "This is a double digit number!" (4 ms)
+    × (99) should return a promise that resolves to "This is a double digit number!" (1 ms)
+    √ (100) should return a rejected promise with an Error object (1 ms)
+
+  ● checkDoubleDigits › (10) should return a promise that resolves to "This is a double digit number!"
+
+    expect(received).resolves.toEqual(expected) // deep equality
+
+    Expected: StringContaining "This is a double digit number!"
+    Received: "This is a double-digit number!"
+
+      73 |     const promise = checkDoubleDigits(10);
+      74 |     expect(promise).toBeInstanceOf(Promise);
+    > 75 |     return expect(promise).resolves.toEqual(
+         |                                     ^
+      76 |       expect.stringContaining('This is a double digit number!')
+      77 |     );
+      78 |   });
+
+      at Object.toEqual (node_modules/expect/build/index.js:174:22)
+      at Object.toEqual (3-UsingAPIs/Week1/unit-tests/ex2-checkDoubleDigits.test.js:75:37)
+
+  ● checkDoubleDigits › (99) should return a promise that resolves to "This is a double digit number!"
+
+    expect(received).resolves.toEqual(expected) // deep equality
+
+    Expected: StringContaining "This is a double digit number!"
+    Received: "This is a double-digit number!"
+
+      82 |     const promise = checkDoubleDigits(99);
+      83 |     expect(promise).toBeInstanceOf(Promise);
+    > 84 |     return expect(promise).resolves.toEqual(
+         |                                     ^
+      85 |       expect.stringContaining('This is a double digit number!')
+      86 |     );
+      87 |   });
+
+      at Object.toEqual (node_modules/expect/build/index.js:174:22)
+      at Object.toEqual (3-UsingAPIs/Week1/unit-tests/ex2-checkDoubleDigits.test.js:84:37)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 9 passed, 11 total
+Snapshots:   0 total
+Time:        0.893 s, estimated 1 s
+Ran all test suites matching /ex2-checkDoubleDigits.test.js/i.
+2024-01-12 07:13:28 info: Disclaimer turned off
+2024-01-12 07:13:38 info: -------------------------------------------------
+2024-01-12 07:13:38 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2024-01-12 07:13:38 info: -------------------------------------------------
+2024-01-12 07:13:41 info: All unit tests passed.
+2024-01-12 07:13:47 info: All steps were completed successfully
+2024-01-12 07:14:16 info: ---------------------------------------
+2024-01-12 07:14:16 info: >>> Running Unit Test `ex3-rollDie` <<<
+2024-01-12 07:14:16 info: ---------------------------------------
+2024-01-12 07:14:20 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    √ should exist and be executable (2 ms)
+    × should have all TODO comments removed (1 ms)
+    √ should call `new Promise()`
+    × `resolve()` should be called with a one argument (2 ms)
+    √ `reject()` should be called with a one argument
+    √ should resolve when the die settles successfully (2 ms)
+    √ should reject with an Error when the die rolls off the table (1 ms)
+
+  ● rollDie › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● rollDie › `resolve()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+      42 |
+      43 |   test('`resolve()` should be called with a one argument', () => {
+    > 44 |     expect(state.resolve).toBe(1);
+         |                           ^
+      45 |   });
+      46 |
+      47 |   test('`reject()` should be called with a one argument', () => {
+
+      at Object.toBe (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:44:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        0.791 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2024-01-12 07:14:22 error: *** ESLint Report ***
+
+ex3-rollDie.js
+  15:18  error  'callback' is defined but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2024-01-12 07:18:10 info: ---------------------------------------
+2024-01-12 07:18:10 info: >>> Running Unit Test `ex3-rollDie` <<<
+2024-01-12 07:18:10 info: ---------------------------------------
+2024-01-12 07:18:14 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    √ should exist and be executable (5 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ should call `new Promise()` (1 ms)
+    × `resolve()` should be called with a one argument (3 ms)
+    √ `reject()` should be called with a one argument
+    √ should resolve when the die settles successfully (1 ms)
+    √ should reject with an Error when the die rolls off the table (2 ms)
+
+  ● rollDie › `resolve()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+      42 |
+      43 |   test('`resolve()` should be called with a one argument', () => {
+    > 44 |     expect(state.resolve).toBe(1);
+         |                           ^
+      45 |   });
+      46 |
+      47 |   test('`reject()` should be called with a one argument', () => {
+
+      at Object.toBe (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:44:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.695 s, estimated 1 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2024-01-12 07:24:05 info: ---------------------------------------
+2024-01-12 07:24:05 info: >>> Running Unit Test `ex3-rollDie` <<<
+2024-01-12 07:24:05 info: ---------------------------------------
+2024-01-12 07:24:08 info: All unit tests passed.
+2024-01-12 07:24:13 info: All steps were completed successfully
+2024-01-12 07:24:33 info: ---------------------------------------
+2024-01-12 07:24:33 info: >>> Running Unit Test `ex3-rollDie` <<<
+2024-01-12 07:24:33 info: ---------------------------------------
+2024-01-12 07:24:36 info: All unit tests passed.
+2024-01-12 07:24:41 info: All steps were completed successfully
+2024-01-12 07:24:55 info: --------------------------------------------
+2024-01-12 07:24:55 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-01-12 07:24:55 info: --------------------------------------------
+2024-01-12 07:25:01 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (3 ms)
+    × should have all TODO comments removed (2 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should use `dice.map()` (1 ms)
+    √ should use `Promise.all()`
+    √ should resolve when all dice settle successfully (1015 ms)
+    × should reject with an Error when a die rolls off the table (1017 ms)
+
+  ● ex4-pokerDiceAll › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |     expect(exported).toBeDefined();
+      67 |
+      68 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        2.921 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2024-01-12 07:25:03 error: *** ESLint Report ***
+
+ex4-pokerDiceAll.js
+  27:7   error  'rollDie' is assigned a value but never used  no-unused-vars
+  34:30  error  'rej' is defined but never used               no-unused-vars
+  39:4   error  Unnecessary semicolon                         no-extra-semi
+  44:2   error  Unnecessary semicolon                         no-extra-semi
+
+✖ 4 problems (4 errors, 0 warnings)
+  2 errors and 0 warnings potentially fixable with the `--fix` option.
+
+
+2024-01-12 07:25:07 error: *** Spell Checker Report ***
+
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:63:9 - Unknown word (resaen)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:63:49 - Unknown word (athour)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:65:53 - Unknown word (wich)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:66:19 - Unknown word (opration)
+
+2024-01-12 08:55:55 info: --------------------------------------------
+2024-01-12 08:55:55 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-01-12 08:55:55 info: --------------------------------------------
+2024-01-12 08:56:01 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (2 ms)
+    × should have all TODO comments removed (1 ms)
+    √ `rollDice` should not contain unneeded console.log calls
+    √ should use `dice.map()`
+    √ should use `Promise.all()`
+    × should resolve when all dice settle successfully (1012 ms)
+    √ should reject with an Error when a die rolls off the table (1015 ms)
+
+  ● ex4-pokerDiceAll › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    Die 3 rolled off the table.
+
+      36 |         if (eachDice === 3) {
+      37 |           // Reject die 3, for example
+    > 38 |           rej(new Error(`Die ${eachDice} rolled off the table.`));
+         |               ^
+      39 |         } else {
+      40 |           // Resolve the other dice
+      41 |           res(`${eachDice}`);
+
+      at Timeout._onTimeout (3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:38:15)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      46 |
+      47 |   test('should resolve when all dice settle successfully', async () => {
+    > 48 |     expect.assertions(4);
+         |            ^
+      49 |     expect(exported).toBeDefined();
+      50 |
+      51 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:48:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        3.209 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2024-01-12 08:56:04 error: *** ESLint Report ***
+
+ex4-pokerDiceAll.js
+  27:7  error  'rollDie' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2024-01-12 08:56:08 error: *** Spell Checker Report ***
+
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:69:9 - Unknown word (resaen)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:69:49 - Unknown word (athour)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:71:53 - Unknown word (wich)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:72:19 - Unknown word (opration)
+
+2024-01-12 08:58:02 info: --------------------------------------------
+2024-01-12 08:58:02 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-01-12 08:58:02 info: --------------------------------------------
+2024-01-12 08:58:08 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (2 ms)
+    × should have all TODO comments removed (1 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should use `dice.map()` (1 ms)
+    × should use `Promise.all()`
+    √ should resolve when all dice settle successfully (1027 ms)
+    × should reject with an Error when a die rolls off the table (1013 ms)
+
+  ● ex4-pokerDiceAll › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex4-pokerDiceAll › should use `Promise.all()`
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      42 |
+      43 |   test('should use `Promise.all()`', () => {
+    > 44 |     expect(state.promiseAll).toBeDefined();
+         |                              ^
+      45 |   });
+      46 |
+      47 |   test('should resolve when all dice settle successfully', async () => {
+
+      at Object.toBeDefined (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:44:30)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |     expect(exported).toBeDefined();
+      67 |
+      68 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 4 passed, 7 total
+Snapshots:   0 total
+Time:        2.782 s, estimated 4 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2024-01-12 08:58:10 error: *** ESLint Report ***
+
+ex4-pokerDiceAll.js
+  27:7  error  'rollDie' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2024-01-12 08:58:14 error: *** Spell Checker Report ***
+
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:69:9 - Unknown word (resaen)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:69:49 - Unknown word (athour)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:71:53 - Unknown word (wich)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:72:19 - Unknown word (opration)
+
+2024-01-12 08:58:56 info: --------------------------------------------
+2024-01-12 08:58:56 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-01-12 08:58:56 info: --------------------------------------------
+2024-01-12 08:59:02 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (2 ms)
+    × should have all TODO comments removed (1 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should use `dice.map()`
+    √ should use `Promise.all()`
+    × should resolve when all dice settle successfully (1012 ms)
+    √ should reject with an Error when a die rolls off the table (1011 ms)
+
+  ● ex4-pokerDiceAll › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    Die 3 rolled off the table.
+
+      36 |         if (eachDice === 3) {
+      37 |           // Reject die 3, for example
+    > 38 |           rej(new Error(`Die ${eachDice} rolled off the table.`));
+         |               ^
+      39 |         } else {
+      40 |           // Resolve the other dice
+      41 |           res(`${eachDice}`);
+
+      at Timeout._onTimeout (3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:38:15)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      46 |
+      47 |   test('should resolve when all dice settle successfully', async () => {
+    > 48 |     expect.assertions(4);
+         |            ^
+      49 |     expect(exported).toBeDefined();
+      50 |
+      51 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:48:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        2.747 s, estimated 3 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2024-01-12 08:59:05 error: *** ESLint Report ***
+
+ex4-pokerDiceAll.js
+  27:7  error  'rollDie' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2024-01-12 08:59:07 error: *** Spell Checker Report ***
+
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:69:9 - Unknown word (resaen)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:69:49 - Unknown word (athour)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:71:53 - Unknown word (wich)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:72:19 - Unknown word (opration)
+
+2024-01-12 09:01:25 info: --------------------------------------------
+2024-01-12 09:01:25 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-01-12 09:01:25 info: --------------------------------------------
+2024-01-12 09:01:31 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (2 ms)
+    × should have all TODO comments removed (2 ms)
+    √ `rollDice` should not contain unneeded console.log calls
+    √ should use `dice.map()` (1 ms)
+    √ should use `Promise.all()`
+    × should resolve when all dice settle successfully (1014 ms)
+    √ should reject with an Error when a die rolls off the table (1015 ms)
+
+  ● ex4-pokerDiceAll › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    Die 1 rolled off the table.
+
+      36 |         if (eachDice) {
+      37 |           // Reject die 3, for example
+    > 38 |           rej(new Error(`Die ${eachDice} rolled off the table.`));
+         |               ^
+      39 |         } else {
+      40 |           // Resolve the other dice
+      41 |           res(`${eachDice}`);
+
+      at Timeout._onTimeout (3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:38:15)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      46 |
+      47 |   test('should resolve when all dice settle successfully', async () => {
+    > 48 |     expect.assertions(4);
+         |            ^
+      49 |     expect(exported).toBeDefined();
+      50 |
+      51 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:48:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        2.879 s, estimated 3 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2024-01-12 09:01:33 error: *** ESLint Report ***
+
+ex4-pokerDiceAll.js
+  27:7  error  'rollDie' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2024-01-12 09:01:36 error: *** Spell Checker Report ***
+
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:69:9 - Unknown word (resaen)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:69:49 - Unknown word (athour)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:71:53 - Unknown word (wich)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:72:19 - Unknown word (opration)
+
+2024-01-12 10:26:20 info: --------------------------------------------
+2024-01-12 10:26:20 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-01-12 10:26:20 info: --------------------------------------------
+2024-01-12 10:26:26 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (3 ms)
+    × should have all TODO comments removed (3 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should use `dice.map()`
+    √ should use `Promise.all()` (1 ms)
+    √ should resolve when all dice settle successfully (1012 ms)
+    × should reject with an Error when a die rolls off the table (1005 ms)
+
+  ● ex4-pokerDiceAll › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |     expect(exported).toBeDefined();
+      67 |
+      68 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        2.871 s, estimated 3 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2024-01-12 10:26:29 error: *** ESLint Report ***
+
+ex4-pokerDiceAll.js
+  27:7  error  'rollDie' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2024-01-12 10:26:32 error: *** Spell Checker Report ***
+
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:69:9 - Unknown word (resaen)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:69:49 - Unknown word (athour)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:71:53 - Unknown word (wich)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:72:19 - Unknown word (opration)
+
+2024-01-12 10:27:31 info: --------------------------------------------
+2024-01-12 10:27:31 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-01-12 10:27:31 info: --------------------------------------------
+2024-01-12 10:27:36 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (2 ms)
+    × should have all TODO comments removed (1 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should use `dice.map()`
+    √ should use `Promise.all()`
+    × should resolve when all dice settle successfully (1002 ms)
+    √ should reject with an Error when a die rolls off the table (1002 ms)
+
+  ● ex4-pokerDiceAll › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    Die 3 rolled off the table.
+
+      36 |         if (eachDice === 3) {
+      37 |           // Reject die 3, for example
+    > 38 |           rej(new Error(`Die ${eachDice} rolled off the table.`));
+         |               ^
+      39 |         } else {
+      40 |           // Resolve the other dice
+      41 |           res(`${eachDice}`);
+
+      at Timeout._onTimeout (3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:38:15)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      46 |
+      47 |   test('should resolve when all dice settle successfully', async () => {
+    > 48 |     expect.assertions(4);
+         |            ^
+      49 |     expect(exported).toBeDefined();
+      50 |
+      51 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:48:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        2.621 s, estimated 3 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2024-01-12 10:27:39 error: *** ESLint Report ***
+
+ex4-pokerDiceAll.js
+  27:7  error  'rollDie' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2024-01-12 10:27:42 error: *** Spell Checker Report ***
+
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:69:9 - Unknown word (resaen)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:69:49 - Unknown word (athour)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:71:53 - Unknown word (wich)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:72:19 - Unknown word (opration)
+
+2024-01-12 10:30:23 info: --------------------------------------------
+2024-01-12 10:30:23 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-01-12 10:30:23 info: --------------------------------------------
+2024-01-12 10:30:26 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (2 ms)
+    × should have all TODO comments removed (1 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should use `dice.map()`
+    √ should use `Promise.all()`
+    √ should resolve when all dice settle successfully (1 ms)
+    × should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex4-pokerDiceAll › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |     expect(exported).toBeDefined();
+      67 |
+      68 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        0.769 s, estimated 3 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2024-01-12 10:30:28 error: *** ESLint Report ***
+
+ex4-pokerDiceAll.js
+  27:7   error  'rollDie' is assigned a value but never used  no-unused-vars
+  34:29  error  'rej' is defined but never used               no-unused-vars
+
+✖ 2 problems (2 errors, 0 warnings)
+
+
+2024-01-12 10:30:32 error: *** Spell Checker Report ***
+
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:61:9 - Unknown word (resaen)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:61:49 - Unknown word (athour)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:63:53 - Unknown word (wich)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:64:19 - Unknown word (opration)
+
+2024-01-12 10:32:56 info: --------------------------------------------
+2024-01-12 10:32:56 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-01-12 10:32:56 info: --------------------------------------------
+2024-01-12 10:33:00 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (2 ms)
+    × should have all TODO comments removed (2 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should use `dice.map()`
+    √ should use `Promise.all()` (1 ms)
+    √ should resolve when all dice settle successfully (1 ms)
+    × should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex4-pokerDiceAll › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |     expect(exported).toBeDefined();
+      67 |
+      68 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        0.682 s, estimated 1 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2024-01-12 10:33:03 error: *** ESLint Report ***
+
+ex4-pokerDiceAll.js
+  27:7  error  'rollDie' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2024-01-12 10:33:06 error: *** Spell Checker Report ***
+
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:36:24 - Unknown word (somthing)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:62:9 - Unknown word (resaen)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:62:49 - Unknown word (athour)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:64:53 - Unknown word (wich)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:65:19 - Unknown word (opration)
+
+2024-01-12 10:40:20 info: --------------------------------------------
+2024-01-12 10:40:20 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-01-12 10:40:20 info: --------------------------------------------
+2024-01-12 10:40:26 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (2 ms)
+    × should have all TODO comments removed (1 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should use `dice.map()` (1 ms)
+    √ should use `Promise.all()` (1 ms)
+    √ should resolve when all dice settle successfully (1017 ms)
+    √ should reject with an Error when a die rolls off the table (1016 ms)
+
+  ● ex4-pokerDiceAll › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        2.903 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2024-01-12 10:40:29 error: *** ESLint Report ***
+
+ex4-pokerDiceAll.js
+  27:7  error  'rollDie' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2024-01-12 10:40:32 error: *** Spell Checker Report ***
+
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:66:9 - Unknown word (resaen)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:66:49 - Unknown word (athour)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:68:53 - Unknown word (wich)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:69:19 - Unknown word (opration)
+
+2024-01-12 10:41:28 info: --------------------------------------------
+2024-01-12 10:41:28 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-01-12 10:41:28 info: --------------------------------------------
+2024-01-12 10:41:33 info: All unit tests passed.
+2024-01-12 10:41:35 error: *** ESLint Report ***
+
+ex4-pokerDiceAll.js
+  1:7  error  'rollDie' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2024-01-12 10:41:38 error: *** Spell Checker Report ***
+
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:39:9 - Unknown word (resaen)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:39:49 - Unknown word (athour)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:41:53 - Unknown word (wich)
+c:/Assignments-cohort46/3-UsingAPIs/Week1/assignment/ex4-pokerDiceAll.js:42:19 - Unknown word (opration)
+
+2024-01-12 10:43:29 info: ----------------------------------------------
+2024-01-12 10:43:29 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-01-12 10:43:29 info: ----------------------------------------------
+2024-01-12 10:43:32 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js
+  ex5-pokerDiceChain
+    √ should exist and be executable (2 ms)
+    × should have all TODO comments removed (2 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should resolve when all dice settle successfully (119 ms)
+    √ should reject with an Error when a die rolls off the table (98 ms)
+
+  ● ex5-pokerDiceChain › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.994 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+2024-01-12 10:44:26 info: ----------------------------------------------
+2024-01-12 10:44:26 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-01-12 10:44:26 info: ----------------------------------------------
+2024-01-12 10:44:30 info: All unit tests passed.
+2024-01-12 10:44:37 info: All steps were completed successfully
