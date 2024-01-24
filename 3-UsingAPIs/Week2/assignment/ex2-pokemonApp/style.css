@@ -1,1 +1,19 @@
 /* add your styling here */
+body{
+    display: flex;
+    position: relative;
+}
+#pokemon-list{
+    padding: 10px;
+    
+}
+#poki-btn{
+    padding: 10px;
+}
+img{
+    position: absolute ;
+    top: calc(50%);
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 500px;
+}
