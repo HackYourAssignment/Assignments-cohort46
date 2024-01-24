@@ -33,6 +33,7 @@ async function requestData(url) {
 function renderImage(data) {
   const img = document.createElement('img');
   img.src = data.img;
+  img.alt = data.img.alt;
   document.body.appendChild(img);
 }
 function renderError(error) {
@@ -41,7 +42,6 @@ function renderError(error) {
   document.body.appendChild(h1);
 }
 
-// TODO refactor with async/await and try/catch
 async function main() {
   try {
     const data = await requestData('https://xkcd.now.sh/?comic=latest');
