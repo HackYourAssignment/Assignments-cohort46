@@ -37,29 +37,26 @@ async function fetchData(url) {
   }
 }
 
-async function fetchAndPopulatePokemons(url) {
-  const select = document.querySelector('select');
+function fetchAndPopulatePokemons(url, select, btn) {
   const firstOption = document.createElement('option'); // creates first option (placeholder to indicate a selection must be made)
   firstOption.innerText = '--Please choose an option--';
   select.appendChild(firstOption);
 
-  try {
-    const data = await fetchData(url);
-    const results = data.results;
-
-    results.forEach((result) => {
-      const option = document.createElement('option');
-      option.innerText = result.name;
-      option.value = result.url;
-      select.appendChild(option);
-    });
-
-    select.addEventListener('change', (e) => {
-      fetchImage(e.target.value)
-    });
-  } catch (error) {
-    console.log(error);
-  }
+  btn.addEventListener('click', async () => {
+    try {
+      const data = await fetchData(url);
+      const results = data.results;
+  
+      results.forEach((result) => {
+        const option = document.createElement('option');
+        option.innerText = result.name;
+        option.value = result.url;
+        select.appendChild(option);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  })
 }
 
 async function fetchImage(url) {
@@ -77,22 +74,20 @@ async function fetchImage(url) {
 
 async function main() {
   const body = document.querySelector('body');
+  const btn = document.createElement('button');
   const img = document.createElement('img');
   const select = document.createElement('select'); // create select element (dropdown)
+  btn.textContent = 'Get pokemon list';
   img.setAttribute('id', 'pokemon-img');
   select.setAttribute('class', 'dropdown');
-  img.src = '#';
-  img.alt = '';
 
-  if (img.src === '#'){
-    img.style.class = 'hide';
-  } else {
-    img.style.class = '';
-  }
-  body.append(select, img);
+  body.append(btn, select, img);
+  
+  select.addEventListener('change', (e) => {
+    fetchImage(e.target.value)
+  });
 
-  const URL = 'https://pokeapi.co/api/v2/pokemon?limit=151'
-  fetchAndPopulatePokemons(URL);
+  fetchAndPopulatePokemons('https://pokeapi.co/api/v2/pokemon?limit=151', select, btn);
 }
 
 window.addEventListener('load', main);
