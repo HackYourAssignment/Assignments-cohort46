@@ -19,7 +19,6 @@ function checkDoubleDigits(number) {
       resolve(doubleDigitNum);
     } else {
       reject(new Error('Expected a double digit number'));
-      return;
     }
   });
 }

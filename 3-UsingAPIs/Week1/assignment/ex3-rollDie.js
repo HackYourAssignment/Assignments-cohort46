@@ -43,18 +43,6 @@ function rollDie() {
   });
 }
 
-/*------------------------------------------------------------------------------
-function main() {
-
-  rollDie((error, value) => {
-    if (error !== null) {
-      console.log(error.message);
-    } else {
-      console.log(`Success! Die settled on ${value}.`);
-    }
-  });
-}
-------------------------------------------------------------------------------*/
 function main() {
   rollDie()
     .then((value) => {
@@ -64,6 +52,12 @@ function main() {
       console.error(error.message);
     });
 }
+
+// Explanation:
+// When an error (rejection) occurs, it is now handled
+// properly using the `catch` block. Each die's asynchronous operation is
+// within a Promise, and if one die encounters an issue, it does not affect the others. The use of
+// promises provides an error handling for the asynchronous operations.
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {

@@ -17,27 +17,18 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 function rollDice() {
   const results = [];
 
-  return rollDie(1)
-    .then((value) => {
-      results.push(value);
-      return rollDie(2);
-    })
-    .then((value) => {
-      results.push(value);
-      return rollDie(3);
-    })
-    .then((value) => {
-      results.push(value);
-      return rollDie(4);
-    })
-    .then((value) => {
-      results.push(value);
-      return rollDie(5);
-    })
-    .then((value) => {
-      results.push(value);
+  const rollNextDie = (index) => {
+    if (index <= 5) {
+      return rollDie(index).then((value) => {
+        results.push(value);
+        return rollNextDie(index + 1);
+      });
+    } else {
       return results;
-    });
+    }
+  };
+
+  return rollNextDie(1);
 }
 
 function main() {
@@ -50,4 +41,5 @@ function main() {
 if (process.env.NODE_ENV !== 'test') {
   main();
 }
+
 module.exports = rollDice;
