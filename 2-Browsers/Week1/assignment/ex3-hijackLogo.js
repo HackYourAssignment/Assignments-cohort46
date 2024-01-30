@@ -8,7 +8,14 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
    HackYourFuture logo instead.
 ------------------------------------------------------------------------------*/
 function hijackGoogleLogo() {
-  // TODO your code goes in here
+  const googleLogoContainer = document.querySelector('img[alt="Google"]');
+
+  if (googleLogoContainer) {
+    googleLogoContainer.src = 'https://www.hackyourfuture.dk/static/logo-dark.svg';
+    googleLogoContainer.srcset = 'https://www.hackyourfuture.dk/static/logo-dark.svg';
+  } else {
+    console.warn('Google logo element not found.');
+  }
 }
 
 hijackGoogleLogo();

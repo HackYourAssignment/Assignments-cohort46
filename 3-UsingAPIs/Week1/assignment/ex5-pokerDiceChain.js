@@ -17,16 +17,20 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 function rollDice() {
   const results = [];
 
-  // TODO: expand the chain to include five dice
-  return rollDie(1)
-    .then((value) => {
-      results.push(value);
-      return rollDie(2);
-    })
-    .then((value) => {
+  const rollSequentially = (dieNumber) => {
+    return rollDie(dieNumber).then((value) => {
       results.push(value);
       return results;
     });
+  };
+
+  // Create an array of dice numbers from 1 to 5
+  const diceNumbers = Array.from({ length: 5 }, (_, index) => index + 1);
+
+  // Use reduce to chain the promises sequentially
+  return diceNumbers.reduce((promiseChain, currentDieNumber) => {
+    return promiseChain.then(() => rollSequentially(currentDieNumber));
+  }, Promise.resolve());
 }
 
 function main() {
