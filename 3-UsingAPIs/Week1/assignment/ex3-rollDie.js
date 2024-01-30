@@ -43,18 +43,6 @@ function rollDie() {
   });
 }
 
-/*------------------------------------------------------------------------------
-function main() {
-
-  rollDie((error, value) => {
-    if (error !== null) {
-      console.log(error.message);
-    } else {
-      console.log(`Success! Die settled on ${value}.`);
-    }
-  });
-}
-------------------------------------------------------------------------------*/
 function main() {
   rollDie()
     .then((value) => {
@@ -65,6 +53,13 @@ function main() {
     });
 }
 
+/*------------------------------------------------------------------------------
+Problem description:
+When using the callback approach, there's a race condition where the
+program may exit before the asynchronous rolls are completed. This is because callbacks are not blocking, and the program doesn't wait for the asynchronous
+rolls to finish.
+Therefore, the problem described above no longer occurs.
+------------------------------------------------------------------------------*/
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
   main();

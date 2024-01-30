@@ -377,3 +377,197 @@ Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
 2024-01-09 05:20:28 info: ----------------------------------------------
 2024-01-09 05:20:29 info: All unit tests passed.
 2024-01-09 05:20:30 info: All steps were completed successfully
+2024-01-30 11:48:42 info: ---------------------------------------
+2024-01-30 11:48:42 info: >>> Running Unit Test `ex1-johnWho` <<<
+2024-01-30 11:48:42 info: ---------------------------------------
+2024-01-30 11:48:43 info: All unit tests passed.
+2024-01-30 11:48:44 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  3:9  error  'first' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2024-01-30 11:50:07 info: ---------------------------------------
+2024-01-30 11:50:07 info: >>> Running Unit Test `ex1-johnWho` <<<
+2024-01-30 11:50:07 info: ---------------------------------------
+2024-01-30 11:50:07 info: All unit tests passed.
+2024-01-30 11:50:08 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  3:9  error  'first' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2024-01-30 11:51:01 info: ---------------------------------------
+2024-01-30 11:51:01 info: >>> Running Unit Test `ex1-johnWho` <<<
+2024-01-30 11:51:01 info: ---------------------------------------
+2024-01-30 11:51:02 info: All unit tests passed.
+2024-01-30 11:51:03 info: All steps were completed successfully
+2024-01-30 11:52:00 info: -------------------------------------------------
+2024-01-30 11:52:00 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2024-01-30 11:52:00 info: -------------------------------------------------
+2024-01-30 11:52:01 info: All unit tests passed.
+2024-01-30 11:52:02 info: All steps were completed successfully
+2024-01-30 11:54:45 info: ---------------------------------------
+2024-01-30 11:54:45 info: >>> Running Unit Test `ex3-rollDie` <<<
+2024-01-30 11:54:45 info: ---------------------------------------
+2024-01-30 11:54:46 info: All unit tests passed.
+2024-01-30 11:54:47 info: All steps were completed successfully
+2024-01-30 11:56:53 info: ---------------------------------------
+2024-01-30 11:56:53 info: >>> Running Unit Test `ex3-rollDie` <<<
+2024-01-30 11:56:53 info: ---------------------------------------
+2024-01-30 11:56:54 info: All unit tests passed.
+2024-01-30 11:56:55 info: All steps were completed successfully
+2024-01-30 11:57:11 info: --------------------------------------------
+2024-01-30 11:57:11 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-01-30 11:57:11 info: --------------------------------------------
+2024-01-30 11:57:12 info: All unit tests passed.
+2024-01-30 11:57:13 info: All steps were completed successfully
+2024-01-30 11:58:01 info: ----------------------------------------------
+2024-01-30 11:58:01 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-01-30 11:58:01 info: ----------------------------------------------
+2024-01-30 11:58:02 info: All unit tests passed.
+2024-01-30 11:58:03 info: All steps were completed successfully
+2024-01-30 11:59:23 info: ----------------------------------------------
+2024-01-30 11:59:23 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-01-30 11:59:23 info: ----------------------------------------------
+2024-01-30 11:59:24 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js
+  ex5-pokerDiceChain
+    ✓ should exist and be executable (1 ms)
+    ✓ should have all TODO comments removed
+    ✕ `rollDice` should not contain unneeded console.log calls (1 ms)
+    ✓ should resolve when all dice settle successfully (15 ms)
+    ✓ should reject with an Error when a die rolls off the table (28 ms)
+
+  ● ex5-pokerDiceChain › `rollDice` should not contain unneeded console.log calls
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      137 |       });
+      138 |
+    > 139 |     expect(callsConsoleLog).toBe(false);
+          |                             ^
+      140 |   });
+      141 | }
+      142 |
+
+      at Object.toBe (test-runner/unit-test-helpers.js:139:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.261 s, estimated 1 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+2024-01-31 12:00:23 info: ----------------------------------------------
+2024-01-31 12:00:23 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-01-31 12:00:23 info: ----------------------------------------------
+2024-01-31 12:00:24 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js
+  ex5-pokerDiceChain
+    ✓ should exist and be executable (1 ms)
+    ✓ should have all TODO comments removed
+    ✕ `rollDice` should not contain unneeded console.log calls (2 ms)
+    ✕ should resolve when all dice settle successfully (13 ms)
+    ✕ should reject with an Error when a die rolls off the table (28 ms)
+
+  ● ex5-pokerDiceChain › `rollDice` should not contain unneeded console.log calls
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      137 |       });
+      138 |
+    > 139 |     expect(callsConsoleLog).toBe(false);
+          |                             ^
+      140 |   });
+      141 | }
+      142 |
+
+      at Object.toBe (test-runner/unit-test-helpers.js:139:29)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received five assertion calls.
+
+      24 |
+      25 |   test('should resolve when all dice settle successfully', async () => {
+    > 26 |     expect.assertions(4);
+         |            ^
+      27 |     expect(exported).toBeDefined();
+      28 |
+      29 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:26:12)
+
+  ● ex5-pokerDiceChain › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received four assertion calls.
+
+      41 |
+      42 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 43 |     expect.assertions(3);
+         |            ^
+      44 |     expect(exported).toBeDefined();
+      45 |
+      46 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:43:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 2 passed, 5 total
+Snapshots:   0 total
+Time:        0.264 s, estimated 1 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+2024-01-31 12:01:33 info: ----------------------------------------------
+2024-01-31 12:01:33 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-01-31 12:01:33 info: ----------------------------------------------
+2024-01-31 12:01:33 info: All unit tests passed.
+2024-01-31 12:01:34 error: *** ESLint Report ***
+
+ex5-pokerDiceChain.js
+  28:50  warning  Identifier '_' is not in camelCase  hyf/camelcase
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2024-01-31 12:02:11 info: ----------------------------------------------
+2024-01-31 12:02:11 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-01-31 12:02:11 info: ----------------------------------------------
+2024-01-31 12:02:12 info: All unit tests passed.
+2024-01-31 12:02:13 error: *** ESLint Report ***
+
+ex5-pokerDiceChain.js
+  28:50  warning  Identifier '_' is not in camelCase  hyf/camelcase
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2024-01-31 12:03:16 info: ----------------------------------------------
+2024-01-31 12:03:16 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-01-31 12:03:16 info: ----------------------------------------------
+2024-01-31 12:03:17 info: All unit tests passed.
+2024-01-31 12:03:17 error: *** ESLint Report ***
+
+ex5-pokerDiceChain.js
+  28:50  warning  Identifier '_' is not in camelCase  hyf/camelcase
+
+✖ 1 problem (0 errors, 1 warning)
+
+

@@ -18,8 +18,7 @@ function checkDoubleDigits(number) {
       const doubleDigitNum = 'This is a double digit number!';
       resolve(doubleDigitNum);
     } else {
-      reject(new Error('Expected a double digit number'));
-      return;
+      reject(new Error(`Expected a double digit number but got ${number}`));
     }
   });
 }

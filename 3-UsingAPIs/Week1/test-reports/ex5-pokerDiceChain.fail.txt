@@ -1,0 +1,8 @@
+
+*** ESLint Report ***
+
+ex5-pokerDiceChain.js
+  28:50  warning  Identifier '_' is not in camelCase  hyf/camelcase
+
+✖ 1 problem (0 errors, 1 warning)
+
