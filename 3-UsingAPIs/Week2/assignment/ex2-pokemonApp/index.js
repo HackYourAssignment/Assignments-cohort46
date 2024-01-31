@@ -39,9 +39,7 @@ async function fetchData(url) {
 async function fetchAndPopulatePokemons(url, selectElement) {
   try {
     const response = await fetchData(url);
-    const data = response.results; // Adjust this line based on the actual structure
-
-    console.log('Data:', data);
+    const data = response.results;
 
     if (!Array.isArray(data)) {
       throw new Error('Data is not an array.');
@@ -67,21 +65,46 @@ async function fetchImage(url, imgElement) {
   }
 }
 
+function createSelectElement() {
+  const selectElement = document.createElement('select');
+  document.body.appendChild(selectElement);
+  return selectElement;
+}
+
+function createImgElement() {
+  const imgElement = document.createElement('img');
+  imgElement.alt = 'Pokemon Image';
+
+  const defaultImageUrl = 'https://pokeapi.co/api/v2/pokemon/';
+  imgElement.src = defaultImageUrl;
+
+  document.body.appendChild(imgElement);
+  return imgElement;
+}
+
+function createButtonElement() {
+  const buttonElement = document.createElement('button');
+  buttonElement.type = 'button';
+  buttonElement.textContent = 'Get Pokemons';
+  document.body.appendChild(buttonElement);
+  return buttonElement;
+}
+
 function main() {
   const apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
-  const selectElement = document.querySelector('select');
-  const imgElement = document.querySelector('img');
 
-  if (selectElement && imgElement) {
-    fetchAndPopulatePokemons(apiUrl, selectElement);
+  const selectElement = createSelectElement();
+  const imgElement = createImgElement();
+  const getPokemonsButton = createButtonElement();
 
-    selectElement.addEventListener('change', async () => {
-      const selectedPokemonUrl = selectElement.value;
-      await fetchImage(selectedPokemonUrl, imgElement);
-    });
-  } else {
-    console.error('Select or img element not found.');
-  }
+  getPokemonsButton.addEventListener('click', async () => {
+    await fetchAndPopulatePokemons(apiUrl, selectElement);
+  });
+
+  selectElement.addEventListener('change', async () => {
+    const selectedPokemonUrl = selectElement.value;
+    await fetchImage(selectedPokemonUrl, imgElement);
+  });
 }
 
 document.addEventListener('DOMContentLoaded', main);

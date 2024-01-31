@@ -13,9 +13,9 @@ Full description at: https://github.com/HackYourFuture/Assignments/blob/main/3-U
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 async function rollDieUntil(wantedValue) {
-  let value;
-  while ((value = await rollDie()) !== wantedValue) {
-    // Keep rolling until the value matches the wantedValue
+  let value = await rollDie();
+  while (value !== wantedValue) {
+    value = await rollDie();
   }
   return value;
 }

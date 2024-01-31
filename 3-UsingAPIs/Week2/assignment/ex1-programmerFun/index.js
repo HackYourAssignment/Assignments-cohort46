@@ -18,24 +18,20 @@ Full description at: https://github.com/HackYourFuture/Assignments/blob/main/3-U
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
 async function requestData(url) {
-  try {
-    const response = await fetch(url);
+  const response = await fetch(url);
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    throw new Error(`Network error: ${error.message}`);
+  if (!response.ok) {
+    throw new Error(`HTTP error! Status: ${response.status}`);
   }
+
+  const data = await response.json();
+  return data;
 }
 
 function renderImage(data) {
   const imgElement = document.createElement('img');
   imgElement.src = data.img;
-  imgElement.alt = 'Comic'; // Add a descriptive alt text
+  imgElement.alt = data.title;
   document.body.appendChild(imgElement);
 }
 

@@ -13,19 +13,14 @@ Full description at: https://github.com/HackYourFuture/Assignments/blob/main/3-U
 // ! Do not remove this line
 const rollDie = require('../../helpers/pokerDiceRoller');
 
-async function rollDice() {
+function rollDice() {
   const dice = [1, 2, 3, 4, 5];
 
-  // Using map to create an array of promises
   const promises = dice.map(rollDie);
 
-  // Using Promise.race to resolve with the first resolved promise
-  const result = await Promise.race(promises);
-
-  return result;
+  return Promise.race(promises);
 }
 
-// Refactor this function to use async/await and try/catch
 async function main() {
   try {
     const results = await rollDice();

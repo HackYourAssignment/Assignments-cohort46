@@ -14,14 +14,18 @@ async function getData(url) {
 
 function renderLaureate({ knownName, birth, death }) {
   console.log(`\nName: ${knownName.en}`);
-  console.log(`Birth: ${birth.date}, ${birth.place.locationString}`);
+  console.log(`Birth: ${birth.date}, ${getLocationString(birth.place)}`);
   if (death) {
-    console.log(`Death: ${death.date}, ${death.place.locationString}`);
+    console.log(`Death: ${death.date}, ${getLocationString(death.place)}`);
   }
 }
 
 function renderLaureates(laureates) {
   laureates.forEach(renderLaureate);
+}
+
+function getLocationString(place) {
+  return place ? (place.locationString ? place.locationString : 'N/A') : 'N/A';
 }
 
 async function fetchAndRender() {
@@ -35,6 +39,4 @@ async function fetchAndRender() {
   }
 }
 
-console.log('Starting the script...');
 fetchAndRender();
-console.log('Script execution complete.');
