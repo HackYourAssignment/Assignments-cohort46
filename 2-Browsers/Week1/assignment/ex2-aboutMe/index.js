@@ -9,4 +9,27 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
 
-// TODO add your JavaScript code here.
+function replaceInfo(arr) {
+    //create an Arr from span
+    const span = document.querySelectorAll('span'); //grab span
+    const spanArr = Array.from(span);
+    spanArr.forEach(s => s.classList.add('mySpan'));
+
+    arr.forEach((value, i) => {
+        spanArr[i].textContent = value;
+    });
+}
+
+function main() {
+    const myArray = [
+        'Mero',
+        'Spaghetti',
+        'Cairo'
+    ];
+
+    replaceInfo(myArray);
+}
+window.addEventListener('load', main);
+
+
+

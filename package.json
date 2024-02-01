@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "> If you are following the HackYourFuture curriculum we recommend you to start with module 1: [HTML/CSS/GIT](https://github.com/HackYourFuture/HTML-CSS). To get a complete overview of the HackYourFuture curriculum first, click [here](https://github.com/HackYourFuture/curriculum).",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "node ./test-runner",
     "testalt": "node ./test-runner @assignment",
@@ -50,6 +51,8 @@
     "eslint": "^8.24.0",
     "eslint-plugin-hyf": "git://github.com/remarcmij/eslint-plugin-hyf.git",
     "eslint-plugin-no-autofix": "^1.2.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
     "fast-glob": "^3.2.12",
     "html-validate": "^7.5.0",
     "inquirer": "^8.0.0",
