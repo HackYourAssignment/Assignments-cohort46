@@ -28,7 +28,7 @@ function addToShoppingCart(groceryItem) {
 
   if (!groceryItem || groceryItem.trim() === "") {
     return "Invalid item. Please provide a valid grocery item.";
-  };
+  }
 
   if (shoppingCart.length === 3) {
     shoppingCart.shift(); // Remove the first item if there are more than three items
@@ -41,12 +41,6 @@ function addToShoppingCart(groceryItem) {
 
   return `You bought ${itemList}!`;
 }
-
-// Example usage:
-console.log(addToShoppingCart("eggs")); // You bought milk, eggs!
-console.log(addToShoppingCart("bread")); // You bought milk, eggs, bread!
-console.log(addToShoppingCart("cheese")); // You bought eggs, bread, cheese!
-console.log(addToShoppingCart("tomatoes")); // You bought bread, cheese, tomatoes!
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {

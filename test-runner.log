@@ -1,0 +1,98 @@
+2024-02-10 09:14:15 info: ----------------------------------------------
+2024-02-10 09:14:15 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2024-02-10 09:14:15 info: ----------------------------------------------
+2024-02-10 09:14:23 info: All unit tests passed.
+2024-02-10 09:14:27 error: *** ESLint Report ***
+
+ex1-giveCompliment.js
+  25:7  warning  'compliments' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+  26:9  warning  'random' is never reassigned. Use 'const' instead       no-autofix/prefer-const
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2024-02-10 09:15:21 info: ----------------------------------------------
+2024-02-10 09:15:21 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2024-02-10 09:15:21 info: ----------------------------------------------
+2024-02-10 09:15:24 info: All unit tests passed.
+2024-02-10 09:15:30 info: All steps were completed successfully
+2024-02-10 09:16:14 info: ----------------------------------------
+2024-02-10 09:16:14 info: >>> Running Unit Test `ex2-dogYears` <<<
+2024-02-10 09:16:14 info: ----------------------------------------
+2024-02-10 09:16:18 info: All unit tests passed.
+2024-02-10 09:16:21 error: *** ESLint Report ***
+
+ex2-dogYears.js
+  20:7  warning  'dogAge' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2024-02-10 09:16:54 info: ----------------------------------------
+2024-02-10 09:16:54 info: >>> Running Unit Test `ex2-dogYears` <<<
+2024-02-10 09:16:54 info: ----------------------------------------
+2024-02-10 09:16:58 info: All unit tests passed.
+2024-02-10 09:17:03 info: All steps were completed successfully
+2024-02-10 09:17:27 info: -------------------------------------------
+2024-02-10 09:17:27 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2024-02-10 09:17:27 info: -------------------------------------------
+2024-02-10 09:17:31 info: All unit tests passed.
+2024-02-10 09:17:37 info: All steps were completed successfully
+2024-02-10 09:17:58 info: --------------------------------------------
+2024-02-10 09:17:58 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2024-02-10 09:17:58 info: --------------------------------------------
+2024-02-10 09:17:58 warn: A unit test file was not provided.
+2024-02-10 09:18:04 info: All steps were completed successfully
+2024-02-10 09:18:25 info: ------------------------------------------------
+2024-02-10 09:18:25 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2024-02-10 09:18:25 info: ------------------------------------------------
+2024-02-10 09:18:25 warn: A unit test file was not provided.
+2024-02-10 09:18:31 info: All steps were completed successfully
+2024-02-10 09:18:48 info: -----------------------------------------
+2024-02-10 09:18:48 info: >>> Running Unit Test `ex6-totalCost` <<<
+2024-02-10 09:18:48 info: -----------------------------------------
+2024-02-10 09:18:48 warn: A unit test file was not provided.
+2024-02-10 09:18:54 error: *** Spell Checker Report ***
+
+c:/Assignments-cohort46/1-JavaScript/Week2/assignment/ex6-totalCost.js:37:34 - Unknown word (preis)
+c:/Assignments-cohort46/1-JavaScript/Week2/assignment/ex6-totalCost.js:41:12 - Unknown word (Preis)
+c:/Assignments-cohort46/1-JavaScript/Week2/assignment/ex6-totalCost.js:43:28 - Unknown word (Preis)
+
+2024-02-10 09:20:57 info: -----------------------------------------
+2024-02-10 09:20:57 info: >>> Running Unit Test `ex6-totalCost` <<<
+2024-02-10 09:20:57 info: -----------------------------------------
+2024-02-10 09:20:57 warn: A unit test file was not provided.
+2024-02-10 09:21:03 info: All steps were completed successfully
+2024-02-10 09:21:30 info: -------------------------------------------
+2024-02-10 09:21:30 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2024-02-10 09:21:30 info: -------------------------------------------
+2024-02-10 09:21:30 warn: A unit test file was not provided.
+2024-02-10 09:21:33 error: *** ESLint Report ***
+
+ex7-mindPrivacy.js
+  33:33  error    'gender' is defined but never used  no-unused-vars
+  33:41  error    'salary' is defined but never used  no-unused-vars
+  72:1   warning  Remove commented-out code           hyf/no-commented-out-code
+  89:1   warning  Remove commented-out code           hyf/no-commented-out-code
+
+✖ 4 problems (2 errors, 2 warnings)
+
+
+2024-02-10 09:25:55 info: -------------------------------------------
+2024-02-10 09:25:55 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2024-02-10 09:25:55 info: -------------------------------------------
+2024-02-10 09:25:55 warn: A unit test file was not provided.
+2024-02-10 09:25:58 error: *** ESLint Report ***
+
+ex7-mindPrivacy.js
+  33:33  error  'gender' is defined but never used  no-unused-vars
+  33:41  error  'salary' is defined but never used  no-unused-vars
+
+✖ 2 problems (2 errors, 0 warnings)
+
+
+2024-02-10 09:31:13 info: -------------------------------------------
+2024-02-10 09:31:13 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2024-02-10 09:31:13 info: -------------------------------------------
+2024-02-10 09:31:13 warn: A unit test file was not provided.
+2024-02-10 09:31:18 info: All steps were completed successfully

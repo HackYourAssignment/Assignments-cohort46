@@ -29,16 +29,18 @@ const cartForParty = {
   popcorn: 1
 };
 
+const cartArray = Object.values(cartForParty);
+
 // Calculate total price function
 function calculateTotalPrice(cart) {
   return cart.reduce(function (accumulated, current) {
-    return accumulated + current.preis;
+    return accumulated + current.price;
   }, 0);
 }
 
-let totalPreis = calculateTotalPrice(cartForParty);
+const totalPrice = calculateTotalPrice(cartArray);
 
-console.log(`Total: ${totalPreis}`);
+console.log(`Total: ${totalPrice}`);
 
 // Test functions
 function test1() {
@@ -54,5 +56,6 @@ function test2() {
 }
 
 // Run tests
-test();
+test1();
+test2();
 

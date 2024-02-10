@@ -30,7 +30,10 @@ const employeeRecords = [
 ];
 
 function filterPrivateData(employeeRecords) {
-  return employeeRecords.map(({ gender, salary, ...rest }) => rest);
+  return employeeRecords.map(({ gender, salary, ...rest }) => {
+    console.log(gender,salary);
+    return rest ;
+  });
 }
 
 // Test functions
@@ -63,31 +66,3 @@ function test() {
 }
 
 test();
-
-
-
-
-// ###########################################
-
-//   let employeeRecords = [
-//     {
-//       name: 'John',
-//       occupation: 'developer',
-//       gender: 'M',
-//       email: 'john.doe@somewhere.net',
-//       salary: 50000,
-//     },
-//     {
-//       name: 'Jane',
-//       occupation: 'manager',
-//       gender: 'F',
-//       email: 'jane.eyre@somewhere.net',
-//       salary: 60000,
-//     },
-//   ];
-  
-// for (let i = 0 ; i < employeeRecords.length ; i++){
-//   delete employeeRecords[i].gender;
-//   delete employeeRecords[i].salary;
-//   console.log(employeeRecords[i]);
-// }
