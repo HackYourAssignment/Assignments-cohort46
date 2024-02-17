@@ -9,7 +9,6 @@ Let's rewrite it (or _refactor_ it, as experienced developers would call it):
 - Using the `map` and `filter` functions, rewrite the function body of
 `doubleEvenNumbers`.
 ------------------------------------------------------------------------------*/
-
 function doubleEvenNumbers(numbers) {
   return numbers
   .filter(number => number % 2 === 0)
