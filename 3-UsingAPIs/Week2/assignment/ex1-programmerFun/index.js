@@ -1,12 +1,10 @@
 'use strict';
 
-const { result } = require("lodash");
-
 function requestData(url) {
   return fetch(url)
   .then((result)=>{
-    if(result === false){
-      throw new Error("somthing went wrong")
+    if(!result.ok){
+      throw new Error("something went wrong")
     }
     return result.json();
   })
@@ -15,6 +13,7 @@ function requestData(url) {
 function renderImage(data) {
   const myImg = document.createElement("img");
   myImg.src = data.img;
+  myImg.alt = "img"
 
   document.body.appendChild(myImg);
 }

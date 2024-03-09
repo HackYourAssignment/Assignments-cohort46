@@ -1,32 +1,31 @@
-'use strict';
+// ! Do not change or remove the next two lines
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 async function rollDieUntil(wantedValue) {
-  while (true) {
-    const value = await rollDie();
+  try {
+    let value;
 
-    if (value === wantedValue) {
-      return value; 
+    while (value !== wantedValue) {
+      value = await rollDie()
     }
-
-    if (value === 'ROLL_OFF') {
-      throw new Error('Die rolled off the table'); 
-    }
+    return value;
+  } catch (err) {
+    throw new Error(`ERROR: ${err.message}`)
   }
 }
 
 async function main() {
   try {
     const results = await rollDieUntil('ACE');
-    console.log('Resolved!', results);
+    return results;
   } catch (error) {
-    console.log('Rejected!', error.message);
+    console.log('Rejected!', error.message)
   }
 }
 
+// ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
   main();
 }
-
 module.exports = rollDieUntil;
 
