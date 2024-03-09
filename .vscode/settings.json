@@ -4,17 +4,18 @@
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
   "files.autoSave": "onFocusChange",
   "prettier.trailingComma": "es5",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     // override possible JavaScript specific user setting
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "editor.guides.highlightActiveIndentation": true,
-  "editor.guides.bracketPairsHorizontal": "active"
+  "editor.guides.bracketPairsHorizontal": "active",
+  "liveServer.settings.port": 5501
 }
